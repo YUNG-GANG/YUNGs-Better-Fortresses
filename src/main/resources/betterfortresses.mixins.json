@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.yungnickyoung.minecraft.betterfortresses.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "betterfortresses.refmap.json",
+  "mixins": [
+    "ChunkGeneratorAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
