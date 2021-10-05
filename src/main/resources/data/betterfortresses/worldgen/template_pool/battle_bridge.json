@@ -3,21 +3,25 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 5000,
       "element": {
+        "name": "battle_bridge_piece_1",
         "location": "betterfortresses:battle_bridge/battle_bridge_piece_1",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "yungsapi:max_count_single_element",
+        "max_count": 2
       }
     },
     {
       "weight": 1,
       "element": {
+        "name": "battle_bridge_piece_2",
         "location": "betterfortresses:battle_bridge/battle_bridge_piece_2",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "yungsapi:max_count_single_element",
+        "max_count": 2
       }
     },
     {

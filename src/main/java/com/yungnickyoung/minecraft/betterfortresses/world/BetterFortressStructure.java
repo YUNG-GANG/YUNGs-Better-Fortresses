@@ -66,12 +66,13 @@ public class BetterFortressStructure extends Structure<NoFeatureConfig> {
 
             int minY = 48;
             int maxY = 70;
-            int y = rand.nextInt(maxY - minY) + minY;
+//            int y = rand.nextInt(maxY - minY) + minY;
+            int y = 35;
 
             BlockPos blockpos = new BlockPos(x, y, z);
             YungJigsawConfig jigsawConfig = new YungJigsawConfig(
                 () -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY).getOrDefault(new ResourceLocation(BetterFortresses.MOD_ID, "battle_bridge_start")),
-                20
+                40
             );
 
             // Generate the structure
