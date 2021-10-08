@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 0,
       "element": {
         "location": "betterfortresses:bridge/bridge_intersection_2",
         "processors": "minecraft:empty",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 4,
+      "weight": 0,
       "element": {
         "location": "betterfortresses:bridge/bridge_intersection_2_corner",
         "processors": "minecraft:empty",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 0,
       "element": {
         "location": "betterfortresses:bridge/bridge_intersection_3",
         "processors": "minecraft:empty",
@@ -33,7 +33,7 @@
       "weight": 1,
       "element": {
         "location": "betterfortresses:bridge/bridge_intersection_4",
-        "processors": "minecraft:empty",
+        "processors": "betterfortresses:bridge",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -41,7 +41,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:bridge/bridge_straight",
+        "location": "betterfortresses:bridge/bridge_straight_og",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

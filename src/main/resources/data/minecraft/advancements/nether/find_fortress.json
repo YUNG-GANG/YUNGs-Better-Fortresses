@@ -23,12 +23,12 @@
           "feature": "fortress"
         }
       }
-    }
-  },
-  "better_fortress": {
-    "trigger": "yungsapi:structure_location",
-    "conditions": {
-      "feature": "betterfortresses:fortress"
+    },
+    "better_fortress": {
+      "trigger": "yungsapi:structure_location",
+      "conditions": {
+        "feature": "betterfortresses:fortress"
+      }
     }
   },
   "requirements": [

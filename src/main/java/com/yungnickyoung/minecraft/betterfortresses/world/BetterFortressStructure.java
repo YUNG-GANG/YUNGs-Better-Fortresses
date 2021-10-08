@@ -67,7 +67,7 @@ public class BetterFortressStructure extends Structure<NoFeatureConfig> {
             int minY = 48;
             int maxY = 70;
 //            int y = rand.nextInt(maxY - minY) + minY;
-            int y = 35;
+            int y = 60;
 
             BlockPos blockpos = new BlockPos(x, y, z);
             YungJigsawConfig jigsawConfig = new YungJigsawConfig(
