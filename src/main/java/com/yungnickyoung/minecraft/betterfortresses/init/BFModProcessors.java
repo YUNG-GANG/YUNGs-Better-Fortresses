@@ -17,7 +17,12 @@ public class BFModProcessors {
 
     private static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            register("bridge_leg_processor", BRIDGE_LEG_PROCESSOR);
             Registry.register(Registry.STRUCTURE_PROCESSOR, new ResourceLocation(BetterFortresses.MOD_ID, "bridge_leg_processor"), BRIDGE_LEG_PROCESSOR);
         });
+    }
+
+    private static IStructureProcessorType<?> register(String name, IStructureProcessorType<?> processor) {
+        return Registry.register(Registry.STRUCTURE_PROCESSOR, new ResourceLocation(BetterFortresses.MOD_ID, name), processor);
     }
 }

@@ -21,23 +21,9 @@ public class BFModConfig {
         ModConfig config = event.getConfig();
 
         if (config.getSpec() == BFConfig.SPEC) {
-            // Dimension whitelisting
-            String rawStringofList = BFConfig.whitelistedDimensions.get();
-            int strLen = rawStringofList.length();
-
-            // Validate the string's format
-            if (strLen < 2 || rawStringofList.charAt(0) != '[' || rawStringofList.charAt(strLen - 1) != ']') {
-                BetterFortresses.LOGGER.error("INVALID VALUE FOR SETTING 'Whitelisted Dimensions'. Using [minecraft:the_nether] instead...");
-                BetterFortresses.whitelistedDimensions = Lists.newArrayList("minecraft:the_nether");
-                return;
-            }
-
-            // Parse string to list
-            BetterFortresses.whitelistedDimensions = Lists.newArrayList(rawStringofList.substring(1, strLen - 1).split(",\\s*"));
-
             // Biome blacklisting
-            rawStringofList = BFConfig.blacklistedBiomes.get();
-            strLen = rawStringofList.length();
+            String rawStringofList = BFConfig.blacklistedBiomes.get();
+            int strLen = rawStringofList.length();
 
             // Validate the string's format
             if (strLen < 2 || rawStringofList.charAt(0) != '[' || rawStringofList.charAt(strLen - 1) != ']') {

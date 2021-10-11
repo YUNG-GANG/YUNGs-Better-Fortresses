@@ -2,12 +2,14 @@ package com.yungnickyoung.minecraft.betterfortresses.init;
 
 import com.google.common.collect.ImmutableMap;
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortresses;
+import com.yungnickyoung.minecraft.betterfortresses.config.BFConfig;
 import com.yungnickyoung.minecraft.betterfortresses.mixin.ChunkGeneratorAccessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.BetterFortressStructure;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.FlatChunkGenerator;
 import net.minecraft.world.gen.FlatGenerationSettings;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
@@ -18,7 +20,6 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.WorldEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -41,7 +42,7 @@ public class BFModStructures {
         // Register event listeners
         FMLJavaModLoadingContext.get().getModEventBus().addListener(BFModStructures::commonSetup);
         MinecraftForge.EVENT_BUS.addListener(BFModStructures::addDimensionalSpacing);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.NORMAL, BFModStructures::onBiomeLoad);
+        MinecraftForge.EVENT_BUS.addListener(BFModStructures::onBiomeLoad);
     }
 
     /**
@@ -58,7 +59,7 @@ public class BFModStructures {
             DimensionStructuresSettings.field_236191_b_ =
                 ImmutableMap.<Structure<?>, StructureSeparationSettings>builder()
                     .putAll(DimensionStructuresSettings.field_236191_b_)
-                    .put(BETTER_FORTRESS.get(), new StructureSeparationSettings(20, 10, 597039957))
+                    .put(BETTER_FORTRESS.get(), new StructureSeparationSettings(10, 5, 597039957))
                     .build();
 
             // Register the configured structure features
@@ -96,11 +97,17 @@ public class BFModStructures {
             return;
         }
 
-        // Remove vanilla fortresses, if enabled
+        // Remove vanilla fortresses
         event.getGeneration().getStructures().removeIf(supplier -> supplier.get().field_236268_b_ == Structure.FORTRESS);
 
-        // Don't spawn Better Fortress in blacklisted biomes
-        if (BetterFortresses.blacklistedBiomes.contains(event.getName().toString())) {
+        // Don't spawn in non-Nether biomes
+        if (event.getCategory() != Biome.Category.NETHER) {
+            return;
+        }
+
+        // Don't spawn in blacklisted/not whitelisted biomes
+        boolean isBiomeInList = BetterFortresses.blacklistedBiomes.contains(event.getName().toString());
+        if ((BFConfig.isBlacklist.get() && isBiomeInList) || (!BFConfig.isBlacklist.get()) && !isBiomeInList) {
             return;
         }
 
@@ -125,17 +132,12 @@ public class BFModStructures {
 
             // We use a temp map because some mods handle immutable maps
             Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(serverWorld.getChunkProvider().generator.func_235957_b_().func_236195_a_());
-            String dimensionName = serverWorld.getDimensionKey().getLocation().toString();
 
-            // Don't spawn in non-whitelisted dimensions
-            if (!BetterFortresses.whitelistedDimensions.contains(serverWorld.getDimensionKey().getLocation().toString())) {
-                tempMap.keySet().remove(BFModStructures.BETTER_FORTRESS.get());
-            }
-
-            // Prevent spawning in superflat world
-            else if (serverWorld.getChunkProvider().getChunkGenerator() instanceof FlatChunkGenerator && serverWorld.getDimensionKey().equals(World.OVERWORLD)) {
+            if (serverWorld.getChunkProvider().getChunkGenerator() instanceof FlatChunkGenerator && serverWorld.getDimensionKey().equals(World.OVERWORLD)) {
+                // Don't spawn in superflat worlds
                 tempMap.keySet().remove(BFModStructures.BETTER_FORTRESS.get());
             } else {
+                // Otherwise, we add the structure to the world
                 tempMap.put(BFModStructures.BETTER_FORTRESS.get(), DimensionStructuresSettings.field_236191_b_.get(BFModStructures.BETTER_FORTRESS.get()));
             }
 

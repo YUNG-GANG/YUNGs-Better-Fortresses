@@ -16,10 +16,9 @@ public class BetterFortresses {
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     /**
-     * Lists of whitelisted dimensions and blacklisted biomes.
+     * Lists of blacklisted biomes.
      * Will be reinitialized later w/ values from config.
      */
-    public static List<String> whitelistedDimensions = Lists.newArrayList("minecraft:the_nether");
     public static List<String> blacklistedBiomes = Lists.newArrayList();
 
     public BetterFortresses() {
@@ -27,8 +26,8 @@ public class BetterFortresses {
     }
 
     private void init() {
-        BFModConfig.init();
         BFModProcessors.init();
         BFModStructures.init();
+        BFModConfig.init();
     }
 }
