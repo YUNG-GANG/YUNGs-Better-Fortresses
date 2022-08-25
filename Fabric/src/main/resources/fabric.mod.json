@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "betterfortresses",
+  "version": "${version}",
+  "name": "YUNG's Better Nether Fortresses",
+  "description": "A complete redesign of Minecraft's Nether Fortresses!.",
+  "authors": [
+    "YUNGNICKYOUNG",
+    "Tera"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-nether-fortresses-fabric",
+    "sources": "https://github.com/yungnickyoung/YUNGs-Better-Nether-Fortresses",
+    "issues": "https://github.com/yungnickyoung/YUNGs-Better-Nether-Fortresses/issues",
+    "discord": "discord.gg/rns3beq"
+  },
+  "license": "LGPLv3",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.yungnickyoung.minecraft.betterfortresses.BetterFortressesFabric"
+    ],
+    "modmenu": [
+      "com.yungnickyoung.minecraft.betterfortresses.config.gui.BNFModMenu"
+    ]
+  },
+  "mixins": [
+    "betterfortresses.mixins.json",
+    "betterfortresses_fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14",
+    "fabric": ">=0.60.0",
+    "minecraft": ">=1.19.2",
+    "cloth-config2": ">=8.0.75",
+    "java": ">=17",
+    "yungsapi": ">=1.19.2-Fabric-3.5.0"
+  }
+}

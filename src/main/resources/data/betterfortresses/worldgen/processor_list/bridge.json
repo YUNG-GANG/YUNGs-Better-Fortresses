@@ -1,7 +1,0 @@
-{
-  "processors": [
-    {
-      "processor_type": "betterfortresses:bridge_leg_processor"
-    }
-  ]
-}
