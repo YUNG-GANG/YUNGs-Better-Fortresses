@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:start",
+        "location": "betterfortresses:keep",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

@@ -5,7 +5,10 @@
   "refmap": "betterfortresses.refmap.json",
   "mixins": [
     "DisableVanillaFortressesMixin",
-    "LocateVanillaFortressCommandMixin"
+    "LocateVanillaFortressCommandMixin",
+    "NoBasaltColumnsInStructuresMixin",
+    "NoDeltasInStructuresMixin",
+    "accessor.WorldGenRegionAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

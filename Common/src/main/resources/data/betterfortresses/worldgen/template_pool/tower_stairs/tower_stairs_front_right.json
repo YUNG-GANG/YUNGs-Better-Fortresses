@@ -1,0 +1,28 @@
+{
+  "name": "betterfortresses:tower_stairs/tower_stairs_front_right",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:keep/tower/tower_stairs_front_right",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "is_priority": true,
+        "name": "tower_stairs",
+        "max_count": 1,
+        "ignore_bounds": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:keep/tower/tower_bottom_front_right",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
