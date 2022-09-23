@@ -1,7 +1,26 @@
 {
   "processors": [
     {
-      "processor_type": "betterfortresses:leg_processor"
+      "processor_type": "betterfortresses:pillar_processor",
+      "target_block": {
+        "Name": "minecraft:orange_terracotta"
+      },
+      "target_block_output": {
+        "Name": "minecraft:nether_bricks"
+      },
+      "pillar_states": {
+        "defaultBlockState": {
+          "Name": "minecraft:nether_bricks"
+        },
+        "entries": [
+          {
+            "blockState": {
+              "Name": "minecraft:magma_block"
+            },
+            "probability": 0.5
+          }
+        ]
+      }
     }
   ]
 }

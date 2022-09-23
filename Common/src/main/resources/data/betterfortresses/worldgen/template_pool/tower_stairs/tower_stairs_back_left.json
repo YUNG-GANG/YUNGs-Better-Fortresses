@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:keep/tower/tower_stairs_back_left",
+        "location": "betterfortresses:keep/tower/tower_stairs_top_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "is_priority": true,
@@ -18,10 +18,21 @@
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:keep/tower/tower_bottom_back_left",
+        "location": "betterfortresses:keep/tower/tower_stairs_mid_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "ignore_bounds": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:keep/tower/tower_stairs_bottom_back_left",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "ignore_bounds": true,
+        "element_type": "yungsapi:yung_single_element"
       }
     }
   ]
