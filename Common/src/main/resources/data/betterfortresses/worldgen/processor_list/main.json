@@ -17,7 +17,11 @@
             "blockState": {
               "Name": "minecraft:magma_block"
             },
-            "probability": 0.5
+            "probability": 0.5,
+            "condition": {
+              "type": "yungsapi:altitude",
+              "top_cutoff_y": 31
+            }
           }
         ]
       }

@@ -18,6 +18,21 @@
     {
       "weight": 1,
       "element": {
+        "location": "betterfortresses:keep/tower/tower_stairs_back_right",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "ignore_bounds": true,
+        "is_priority": true,
+        "condition": {
+          "type": "yungsapi:altitude",
+          "bottom_cutoff_y": 30
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
         "location": "betterfortresses:keep/tower/tower_stairs_mid_back_right",
         "processors": "betterfortresses:main",
         "projection": "rigid",
