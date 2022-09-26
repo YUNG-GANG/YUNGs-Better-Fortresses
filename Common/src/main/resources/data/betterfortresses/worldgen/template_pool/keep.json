@@ -8,7 +8,28 @@
         "location": "betterfortresses:keep/keep_well",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "ignore_bounds": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:keep/keep_left_side",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "ignore_bounds": false,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:keep/keep_right_side",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "ignore_bounds": false,
+        "element_type": "yungsapi:yung_single_element"
       }
     }
   ]

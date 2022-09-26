@@ -1,0 +1,15 @@
+{
+  "name": "betterfortresses:halls_terminators",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_deadend_prop",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

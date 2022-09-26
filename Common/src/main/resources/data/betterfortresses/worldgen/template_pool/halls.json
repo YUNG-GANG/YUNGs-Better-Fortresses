@@ -1,0 +1,42 @@
+{
+  "name": "betterfortresses:halls",
+  "fallback": "betterfortresses:halls_terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_straight_prop",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_3_prop",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_turn_left_prop_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_turn_left_prop_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

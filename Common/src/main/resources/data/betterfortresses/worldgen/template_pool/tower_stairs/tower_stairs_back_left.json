@@ -5,23 +5,39 @@
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:keep/tower/tower_stairs_top_back_left",
+        "location": "betterfortresses:keep/tower/keep_tower_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "is_priority": true,
-        "name": "tower_stairs",
-        "max_count": 1,
-        "ignore_bounds": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:keep/tower/tower_stairs_back_left",
+        "location": "betterfortresses:keep/tower/tower_stairs_top_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "ignore_bounds": true,
+        "name": "tower_stairs",
+        "is_priority": true,
+        "max_count": 1,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:keep/tower/tower_stairs_mid_back_left",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:keep/tower/tower_stairs_chainable_back_left",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
         "is_priority": true,
         "condition": {
           "type": "yungsapi:altitude",
@@ -33,20 +49,18 @@
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:keep/tower/tower_stairs_mid_back_left",
+        "location": "betterfortresses:keep/tower/tower_stairs_bottom_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "ignore_bounds": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:keep/tower/tower_stairs_bottom_back_left",
+        "location": "betterfortresses:keep/tower/tower_bottom_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "ignore_bounds": true,
         "element_type": "yungsapi:yung_single_element"
       }
     }
