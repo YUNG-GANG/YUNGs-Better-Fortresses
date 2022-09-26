@@ -25,6 +25,64 @@
           }
         ]
       }
+    },
+    {
+      "processor_type": "betterfortresses:pillar_processor",
+      "target_block": {
+        "Name": "minecraft:yellow_terracotta"
+      },
+      "target_block_output": {
+        "Name": "minecraft:nether_bricks"
+      },
+      "pillar_states": {
+        "defaultBlockState": {
+          "Name": "minecraft:nether_bricks"
+        },
+        "entries": [
+        ]
+      }
+    },
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "block": "minecraft:diorite",
+            "predicate_type": "minecraft:block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:lava"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:purple_terracotta",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.75
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:obsidian"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:purple_terracotta",
+            "predicate_type": "minecraft:block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:crying_obsidian"
+          }
+        }
+      ]
     }
   ]
 }
