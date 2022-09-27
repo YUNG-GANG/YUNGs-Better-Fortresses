@@ -1,0 +1,195 @@
+{
+  "name": "betterfortresses:hall_prop_any",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_armory_4wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_armory_5wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_broken_statue_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_broken_statue_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_broken_statue_2",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+//    {
+//      "weight": 1,
+//      "element": {
+//        "location": "betterfortresses:halls/prop/hall_prop_desk",
+//        "processors": "betterfortresses:main",
+//        "projection": "rigid",
+//        "element_type": "minecraft:single_pool_element"
+//      }
+//    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_fireplace_3wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_fireplace_3wide_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_fireplace_3wide_2",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_fireplace_4wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_fireplace_4wide_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_fireplace_crumbled_3wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_hearth_5wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_hearth_5wide_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_shelf_4wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_shelf_5wide_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_wart_3wide",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/hall_prop_wart_5wide",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/obsidian_deposit_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/obsidian_deposit_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/prop/obsidian_deposit_2",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

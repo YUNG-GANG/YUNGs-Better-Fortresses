@@ -3,7 +3,7 @@
   "fallback": "betterfortresses:halls_terminators",
   "elements": [
     {
-      "weight": 1,
+      "weight": 3,
       "element": {
         "location": "betterfortresses:halls/hall_straight_prop",
         "processors": "betterfortresses:main",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/hall_3_prop",
         "processors": "betterfortresses:main",
@@ -33,6 +33,69 @@
       "weight": 1,
       "element": {
         "location": "betterfortresses:halls/hall_turn_left_prop_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "betterfortresses:halls/hall_straight_decor",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/hall_3_decor",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_turn_left_decor",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_straight",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/hall_3",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_turn_left",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

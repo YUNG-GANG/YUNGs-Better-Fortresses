@@ -10,6 +10,34 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_deadend_decor",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_deadend",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/hall_terminator",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
     }
   ]
 }
