@@ -3,6 +3,24 @@
   "fallback": "betterfortresses:halls_terminators",
   "elements": [
     {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/halls_entrance_frame",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/halls_entrance_tunnel",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
       "weight": 6,
       "element": {
         "location": "betterfortresses:halls/hall_straight_prop",

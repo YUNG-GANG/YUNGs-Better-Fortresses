@@ -40,6 +40,282 @@
         "projection": "rigid",
         "element_type": "yungsapi:yung_single_element"
       }
+    },
+    // Small rooms
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/room/quarters_sm",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "quarters",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/room/officer_sm",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "officer",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/storeroom_sm_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "storeroom",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/storeroom_sm_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "storeroom",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/room/study_sm",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "study",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/room/a_very_ethical_room",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "a_very_ethical_room",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    // Medium rooms (left/right)
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/mess_md_l_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "mess",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/mess_md_r_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "mess",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/study_md_l_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "study",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/study_md_r_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "study",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/jail_md_l_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "jail",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/jail_md_r_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "jail",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/quarters_md_l_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "quarters",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/quarters_md_r_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "quarters",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/worship_md_l_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "worship",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/worship_md_r_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "worship",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/nether_reactor_md_l_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "nether_reactor",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/nether_reactor_md_r_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "nether_reactor",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    // Medium rooms (side)
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/room/puzzle_md_side_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "puzzle_md_side_0",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/room/obsidan_md_side_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "obsidian_room",
+        "max_count": 2,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "betterfortresses:halls/room/armory_md_side_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "armory",
+        "max_count": 1,
+        "min_required_depth": 10,
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
     }
   ]
 }
