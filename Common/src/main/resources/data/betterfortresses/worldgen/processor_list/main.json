@@ -4,6 +4,12 @@
       "processor_type": "betterfortresses:stair_pillar_processor"
     },
     {
+      "processor_type": "betterfortresses:item_frame_processor"
+    },
+    {
+      "processor_type": "betterfortresses:piglin_processor"
+    },
+    {
       "processor_type": "betterfortresses:pillar_processor",
       "target_block": {
         "Name": "minecraft:orange_terracotta"

@@ -6,6 +6,7 @@ import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTyp
 import com.yungnickyoung.minecraft.yungsapi.world.processor.StructureEntityProcessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -65,7 +66,8 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
             newNBT.putInt("TileZ", globalEntityInfo.blockPos.getZ());
 
             // Randomize rotation
-            int randomRotation = random.nextInt(8);
+            int minRotation = item.equals("minecraft:chiseled_nether_bricks") ? 1 : 0;
+            int randomRotation = Mth.randomBetweenInclusive(random, minRotation, 7);
             newNBT.putByte("ItemRotation", (byte) randomRotation);
 
             globalEntityInfo = new StructureTemplate.StructureEntityInfo(globalEntityInfo.pos, globalEntityInfo.blockPos, newNBT);

@@ -46,8 +46,13 @@ public class NoBasaltColumnsInStructuresMixin {
             return;
         }
 
-        if (structureManager.getStructureAt(mutableBlockPos, fortressStructure).isValid()) {
-            cir.setReturnValue(false);
+        try {
+            if (structureManager.getStructureAt(mutableBlockPos, fortressStructure).isValid()) {
+                cir.setReturnValue(false);
+            }
+        } catch (Exception e) {
+            // Hotfix -- prevent crash
+            // Worst case scenario we just have some basalt columns in the structure.
         }
     }
 }

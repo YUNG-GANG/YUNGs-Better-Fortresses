@@ -38,8 +38,13 @@ public class NoDeltasInStructuresMixin {
             return;
         }
 
-        if (structureManager.getStructureAt(context.origin(), fortressStructure).isValid()) {
-            cir.setReturnValue(false);
+        try {
+            if (structureManager.getStructureAt(context.origin(), fortressStructure).isValid()) {
+                cir.setReturnValue(false);
+            }
+        } catch (Exception e) {
+            // Hotfix -- prevent crash
+            // Worst case scenario we just have some deltas in the structure.
         }
     }
 }

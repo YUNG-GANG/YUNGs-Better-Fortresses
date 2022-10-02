@@ -35,6 +35,7 @@
         "location": "betterfortresses:halls/hall_3_prop",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -44,6 +45,7 @@
         "location": "betterfortresses:halls/hall_turn_left_prop_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -53,6 +55,7 @@
         "location": "betterfortresses:halls/hall_turn_left_prop_1",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -71,6 +74,7 @@
         "location": "betterfortresses:halls/hall_3_decor",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -80,6 +84,7 @@
         "location": "betterfortresses:halls/hall_turn_left_decor",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -98,6 +103,7 @@
         "location": "betterfortresses:halls/hall_3",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -107,6 +113,7 @@
         "location": "betterfortresses:halls/hall_turn_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -116,6 +123,7 @@
         "location": "betterfortresses:halls/hall_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "min_required_depth": 10,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -128,7 +136,7 @@
         "projection": "rigid",
         "name": "quarters",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -140,7 +148,7 @@
         "projection": "rigid",
         "name": "officer",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -152,7 +160,7 @@
         "projection": "rigid",
         "name": "storeroom",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -164,7 +172,7 @@
         "projection": "rigid",
         "name": "storeroom",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -176,7 +184,7 @@
         "projection": "rigid",
         "name": "study",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -188,7 +196,7 @@
         "projection": "rigid",
         "name": "a_very_ethical_room",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -201,7 +209,7 @@
         "projection": "rigid",
         "name": "mess",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -213,7 +221,7 @@
         "projection": "rigid",
         "name": "mess",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -225,7 +233,7 @@
         "projection": "rigid",
         "name": "study",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -237,7 +245,7 @@
         "projection": "rigid",
         "name": "study",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -249,7 +257,7 @@
         "projection": "rigid",
         "name": "jail",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -261,7 +269,7 @@
         "projection": "rigid",
         "name": "jail",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -273,7 +281,7 @@
         "projection": "rigid",
         "name": "quarters",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -285,7 +293,7 @@
         "projection": "rigid",
         "name": "quarters",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -297,7 +305,7 @@
         "projection": "rigid",
         "name": "worship",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -309,7 +317,7 @@
         "projection": "rigid",
         "name": "worship",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -321,7 +329,7 @@
         "projection": "rigid",
         "name": "nether_reactor",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -333,7 +341,7 @@
         "projection": "rigid",
         "name": "nether_reactor",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -346,7 +354,7 @@
         "projection": "rigid",
         "name": "puzzle_md_side_0",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -358,7 +366,7 @@
         "projection": "rigid",
         "name": "obsidian_room",
         "max_count": 2,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -370,7 +378,7 @@
         "projection": "rigid",
         "name": "armory",
         "max_count": 1,
-        "min_required_depth": 10,
+        "min_required_depth": 16,
         "element_type": "yungsapi:yung_single_element"
       }
     }
