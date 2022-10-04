@@ -4,7 +4,7 @@
   "step": "surface_structures",
   "start_pool": "betterfortresses:starts",
   "start_jigsaw_name": "betterfortresses:anchor",
-  "size": 20,
+  "size": 30,
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {
