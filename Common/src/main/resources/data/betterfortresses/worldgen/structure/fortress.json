@@ -5,6 +5,7 @@
   "start_pool": "betterfortresses:starts",
   "start_jigsaw_name": "betterfortresses:anchor",
   "size": 30,
+  "terrain_adaptation": "beard_box",
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {
@@ -15,6 +16,6 @@
     }
   },
   "use_expansion_hack": false,
-  "max_distance_from_center": 128,
+  "max_distance_from_center": 116,
   "spawn_overrides": {}
 }
