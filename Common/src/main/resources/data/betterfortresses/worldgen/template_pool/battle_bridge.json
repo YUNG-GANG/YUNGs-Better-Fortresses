@@ -10,7 +10,7 @@
         "projection": "rigid",
         "is_priority": true,
         "name": "battle_bridge_start",
-        "max_count": 3,
+        "max_count": 5,
         "element_type": "yungsapi:yung_single_element"
       }
     },
