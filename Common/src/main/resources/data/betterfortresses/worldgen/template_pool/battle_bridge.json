@@ -8,6 +8,9 @@
         "location": "betterfortresses:battle_bridge/battle_bridge_start",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "is_priority": true,
+        "name": "battle_bridge_start",
+        "max_count": 3,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -17,32 +20,24 @@
         "location": "betterfortresses:battle_bridge/battle_bridge_straight",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "name": "battle_bridge_straight",
-        "max_count": 2,
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:battle_bridge/battle_bridge_straight_oneside",
+        "location": "betterfortresses:battle_bridge/battle_bridge_gate",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "name": "battle_bridge_straight_oneside",
-        "max_count": 1,
-        "is_priority": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:battle_bridge/battle_bridge_straight_bothsides",
+        "location": "betterfortresses:battle_bridge/battle_bridge_split",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "name": "battle_bridge_straight_bothsides",
-        "max_count": 2,
-        "is_priority": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -50,44 +45,6 @@
       "weight": 1,
       "element": {
         "location": "betterfortresses:battle_bridge/battle_bridge_pillar",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:battle_bridge/battle_bridge_small_start",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:battle_bridge/battle_bridge_small_pillar",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "name": "battle_bridge_small_pillar",
-        "max_count": 6,
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:battle_bridge/battle_bridge_small_junction_straight",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:battle_bridge/blaze_stairs",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "element_type": "yungsapi:yung_single_element"
