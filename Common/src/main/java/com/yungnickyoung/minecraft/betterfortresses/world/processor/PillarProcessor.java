@@ -66,7 +66,10 @@ public class PillarProcessor extends StructureProcessor {
             while (mutable.getY() > levelReader.getMinBuildHeight()
                     && mutable.getY() < levelReader.getMaxBuildHeight()
                     && (currBlockState.isAir() || !levelReader.getFluidState(mutable).isEmpty())) {
-                ConditionContext ctx = new ConditionContext(mutable.getY(), mutable.getY());
+                ConditionContext ctx = new ConditionContext.Builder()
+                        .pieceMinY(mutable.getY())
+                        .pieceMaxY(mutable.getY())
+                        .build();
                 levelReader.getChunk(mutable).setBlockState(mutable, this.pillarStates.get(random, ctx), false);
 
                 // Update to next position

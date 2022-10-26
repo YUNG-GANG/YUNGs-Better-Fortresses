@@ -8,7 +8,7 @@
         "location": "betterfortresses:bridge/bridge_start",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "max_possible_depth": 28,
+        "enhanced_terrain_adaptation": "none",
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -18,6 +18,7 @@
         "location": "betterfortresses:bridge/bridge_pillar",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": "none",
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -27,7 +28,11 @@
         "location": "betterfortresses:bridge/bridge_junction_2",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "max_possible_depth": 26,
+        "condition": {
+          "type": "yungsapi:depth",
+          "max_possible_depth": 48
+        },
+        "enhanced_terrain_adaptation": "none",
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -37,7 +42,11 @@
         "location": "betterfortresses:bridge/bridge_junction_3",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "max_possible_depth": 26,
+        "condition": {
+          "type": "yungsapi:depth",
+          "max_possible_depth": 48
+        },
+        "enhanced_terrain_adaptation": "none",
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -47,7 +56,11 @@
         "location": "betterfortresses:bridge/bridge_junction_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "max_possible_depth": 26,
+        "condition": {
+          "type": "yungsapi:depth",
+          "max_possible_depth": 48
+        },
+        "enhanced_terrain_adaptation": "none",
         "element_type": "yungsapi:yung_single_element"
       }
     }

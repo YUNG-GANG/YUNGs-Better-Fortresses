@@ -4,8 +4,8 @@
   "step": "surface_structures",
   "start_pool": "betterfortresses:starts",
   "start_jigsaw_name": "betterfortresses:anchor",
-  "size": 30,
-  "enhanced_terrain_adaptation": "carved_top_no_beard",
+  "size": 40,
+  "enhanced_terrain_adaptation": "carved_top_no_beard_large",
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {
