@@ -1,0 +1,55 @@
+{
+  "name": "betterfortresses:bridge",
+  "fallback": "betterfortresses:bridge_terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_start",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "max_possible_depth": 28,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_pillar",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_junction_2",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "max_possible_depth": 26,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_junction_3",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "max_possible_depth": 26,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_junction_4",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "max_possible_depth": 26,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    }
+  ]
+}
