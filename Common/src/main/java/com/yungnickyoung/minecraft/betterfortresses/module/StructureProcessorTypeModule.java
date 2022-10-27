@@ -2,6 +2,7 @@ package com.yungnickyoung.minecraft.betterfortresses.module;
 
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.services.Services;
+import com.yungnickyoung.minecraft.betterfortresses.world.processor.BridgeArchProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.LiquidBlockProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.PillarProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.StairPillarProcessor;
@@ -16,6 +17,9 @@ public class StructureProcessorTypeModule {
 
     @AutoRegister("stair_pillar_processor")
     public static StructureProcessorType<StairPillarProcessor> STAIR_PILLAR_PROCESSOR = () -> StairPillarProcessor.CODEC;
+
+    @AutoRegister("bridge_arch_processor")
+    public static StructureProcessorType<BridgeArchProcessor> BRIDGE_ARCH_PROCESSOR = () -> BridgeArchProcessor.CODEC;
 
     @AutoRegister("liquid_block_processor")
     public static StructureProcessorType<LiquidBlockProcessor> LIQUID_BLOCK_PROCESSOR = () -> LiquidBlockProcessor.CODEC;

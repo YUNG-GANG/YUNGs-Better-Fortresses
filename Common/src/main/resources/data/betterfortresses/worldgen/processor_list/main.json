@@ -10,6 +10,9 @@
       "processor_type": "betterfortresses:piglin_processor"
     },
     {
+      "processor_type": "betterfortresses:bridge_arch_processor"
+    },
+    {
       "processor_type": "betterfortresses:pillar_processor",
       "target_block": {
         "Name": "minecraft:orange_terracotta"
