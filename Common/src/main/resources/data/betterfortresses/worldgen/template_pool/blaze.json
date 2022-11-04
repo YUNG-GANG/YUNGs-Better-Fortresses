@@ -3,11 +3,174 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 10,
       "element": {
         "location": "betterfortresses:blaze/blaze_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "name": "blaze",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_0_r",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_1_r",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_2_r",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_3_r",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_4_r",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_0_l",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_1_l",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_2_l",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_3_l",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_broken_4_l",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_broken",
+        "max_count": 2,
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     }
