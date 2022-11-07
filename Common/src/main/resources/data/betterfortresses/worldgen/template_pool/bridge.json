@@ -199,6 +199,31 @@
           "conditions": [
             {
               "type": "yungsapi:depth",
+              "max_possible_depth": 40
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 31
+            }
+          ]
+        },
+        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_stairs_r_test",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "bridge_stairs",
+        "max_count": 3,
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
               "min_required_depth": 15,
               "max_possible_depth": 40
             },
@@ -208,6 +233,7 @@
             }
           ]
         },
+        "is_priority": true,
         "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "element_type": "yungsapi:yung_single_element"
       }
