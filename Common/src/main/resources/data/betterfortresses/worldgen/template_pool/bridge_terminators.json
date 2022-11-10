@@ -8,8 +8,7 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -19,8 +18,7 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_1",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -30,8 +28,7 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_2",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -41,8 +38,7 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_3",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -52,8 +48,7 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -63,19 +58,7 @@
         "location": "betterfortresses:bridge/bridge_end_ruined_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_pillar",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -85,8 +68,7 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -96,18 +78,17 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_1",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
-    },    {
+    },
+    {
       "weight": 1,
       "element": {
         "location": "betterfortresses:bridge/bridge_pillar_ruined_2",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -117,8 +98,7 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_3",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -128,8 +108,7 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "ignore_bounds": true,
+        "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
     }

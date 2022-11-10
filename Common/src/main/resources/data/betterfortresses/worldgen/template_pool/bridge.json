@@ -22,6 +22,7 @@
           ]
         },
         "enhanced_terrain_adaptation": "none",
+        "deadend_adjustment": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -160,6 +161,7 @@
           ]
         },
         "enhanced_terrain_adaptation": "none",
+        "deadend_adjustment": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -258,6 +260,7 @@
           ]
         },
         "enhanced_terrain_adaptation": "none",
+        "deadend_adjustment": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
