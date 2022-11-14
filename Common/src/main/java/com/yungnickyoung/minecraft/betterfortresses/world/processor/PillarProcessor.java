@@ -3,8 +3,8 @@ package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
-import com.yungnickyoung.minecraft.yungsapi.world.BlockStateRandomizer;
-import com.yungnickyoung.minecraft.yungsapi.world.condition.ConditionContext;
+import com.yungnickyoung.minecraft.yungsapi.api.world.randomize.BlockStateRandomizer;
+import com.yungnickyoung.minecraft.yungsapi.world.structure.context.StructureContext;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -66,7 +66,7 @@ public class PillarProcessor extends StructureProcessor {
             while (mutable.getY() > levelReader.getMinBuildHeight()
                     && mutable.getY() < levelReader.getMaxBuildHeight()
                     && (currBlockState.isAir() || !levelReader.getFluidState(mutable).isEmpty())) {
-                ConditionContext ctx = new ConditionContext.Builder()
+                StructureContext ctx = new StructureContext.Builder()
                         .pieceMinY(mutable.getY())
                         .pieceMaxY(mutable.getY())
                         .build();
