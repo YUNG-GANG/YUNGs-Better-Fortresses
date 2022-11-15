@@ -111,6 +111,50 @@
         "ignore_bounds": false,
         "element_type": "yungsapi:yung_single_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/blaze_stairs_ruined_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
+              "min_required_depth": 17
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 31
+            }
+          ]
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/blaze_stairs_ruined_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
+              "min_required_depth": 17
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 31
+            }
+          ]
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
     }
   ]
 }

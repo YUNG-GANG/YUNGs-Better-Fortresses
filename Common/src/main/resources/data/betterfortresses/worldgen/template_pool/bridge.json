@@ -385,7 +385,6 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "blaze_stairs",
-        "max_count": 4,
         "condition": {
           "type": "yungsapi:all_of",
           "conditions": [
@@ -399,7 +398,7 @@
             }
           ]
         },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "deadend_adjustment": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -432,7 +431,24 @@
                 "betterfortresses:bridge/bridge_pillar_ruined_1",
                 "betterfortresses:bridge/bridge_pillar_ruined_2",
                 "betterfortresses:bridge/bridge_pillar_ruined_3",
-                "betterfortresses:bridge/bridge_pillar_ruined_4"
+                "betterfortresses:bridge/bridge_pillar_ruined_4",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_junction_3_shelter",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/blaze_stairs",
+                "betterfortresses:bridge/blaze_stairs_ruined_0",
+                "betterfortresses:bridge/blaze_stairs_ruined_1",
+                "betterfortresses:blaze/blaze_0",
+                "betterfortresses:blaze/blaze_broken_0_l",
+                "betterfortresses:blaze/blaze_broken_0_r",
+                "betterfortresses:blaze/blaze_broken_1_l",
+                "betterfortresses:blaze/blaze_broken_1_r",
+                "betterfortresses:blaze/blaze_broken_2_l",
+                "betterfortresses:blaze/blaze_broken_2_r",
+                "betterfortresses:blaze/blaze_broken_3_l",
+                "betterfortresses:blaze/blaze_broken_3_r",
+                "betterfortresses:blaze/blaze_broken_4_l",
+                "betterfortresses:blaze/blaze_broken_4_r"
               ],
               "above_range": 20
             },
@@ -497,7 +513,24 @@
                 "betterfortresses:bridge/bridge_pillar_ruined_1",
                 "betterfortresses:bridge/bridge_pillar_ruined_2",
                 "betterfortresses:bridge/bridge_pillar_ruined_3",
-                "betterfortresses:bridge/bridge_pillar_ruined_4"
+                "betterfortresses:bridge/bridge_pillar_ruined_4",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_junction_3_shelter",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/blaze_stairs",
+                "betterfortresses:bridge/blaze_stairs_ruined_0",
+                "betterfortresses:bridge/blaze_stairs_ruined_1",
+                "betterfortresses:blaze/blaze_0",
+                "betterfortresses:blaze/blaze_broken_0_l",
+                "betterfortresses:blaze/blaze_broken_0_r",
+                "betterfortresses:blaze/blaze_broken_1_l",
+                "betterfortresses:blaze/blaze_broken_1_r",
+                "betterfortresses:blaze/blaze_broken_2_l",
+                "betterfortresses:blaze/blaze_broken_2_r",
+                "betterfortresses:blaze/blaze_broken_3_l",
+                "betterfortresses:blaze/blaze_broken_3_r",
+                "betterfortresses:blaze/blaze_broken_4_l",
+                "betterfortresses:blaze/blaze_broken_4_r"
               ],
               "above_range": 20
             },
@@ -562,7 +595,24 @@
                 "betterfortresses:bridge/bridge_pillar_ruined_1",
                 "betterfortresses:bridge/bridge_pillar_ruined_2",
                 "betterfortresses:bridge/bridge_pillar_ruined_3",
-                "betterfortresses:bridge/bridge_pillar_ruined_4"
+                "betterfortresses:bridge/bridge_pillar_ruined_4",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_junction_3_shelter",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/blaze_stairs",
+                "betterfortresses:bridge/blaze_stairs_ruined_0",
+                "betterfortresses:bridge/blaze_stairs_ruined_1",
+                "betterfortresses:blaze/blaze_0",
+                "betterfortresses:blaze/blaze_broken_0_l",
+                "betterfortresses:blaze/blaze_broken_0_r",
+                "betterfortresses:blaze/blaze_broken_1_l",
+                "betterfortresses:blaze/blaze_broken_1_r",
+                "betterfortresses:blaze/blaze_broken_2_l",
+                "betterfortresses:blaze/blaze_broken_2_r",
+                "betterfortresses:blaze/blaze_broken_3_l",
+                "betterfortresses:blaze/blaze_broken_3_r",
+                "betterfortresses:blaze/blaze_broken_4_l",
+                "betterfortresses:blaze/blaze_broken_4_r"
               ],
               "above_range": 20
             },

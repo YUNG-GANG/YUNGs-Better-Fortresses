@@ -9,7 +9,7 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "blaze",
-        "max_count": 2,
+        "max_count": 3,
         "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "element_type": "yungsapi:yung_single_element"
       }
