@@ -10,10 +10,38 @@
         "projection": "rigid",
         "is_priority": true,
         "condition": {
-          "type": "yungsapi:piece_in_horizontal_direction",
-          "pieces": ["*"],
-          "range": 5,
-          "rotation": "none"
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:piece_in_horizontal_direction",
+              "pieces": [
+                "*"
+              ],
+              "range": 5,
+              "rotation": "none"
+            },
+            {
+              "type": "yungsapi:not",
+              "condition": {
+                "type": "yungsapi:piece_in_horizontal_direction",
+                "pieces": [
+                  "betterfortresses:bridge/bridge_start_ruined_0",
+                  "betterfortresses:bridge/bridge_start_ruined_1",
+                  "betterfortresses:bridge/bridge_start_ruined_2",
+                  "betterfortresses:bridge/bridge_start_ruined_3",
+                  "betterfortresses:bridge/bridge_start_ruined_4",
+                  "betterfortresses:bridge/bridge_end_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_1",
+                  "betterfortresses:bridge/bridge_pillar_ruined_2",
+                  "betterfortresses:bridge/bridge_pillar_ruined_3",
+                  "betterfortresses:bridge/bridge_pillar_ruined_4"
+                ],
+                "range": 5,
+                "rotation": "none"
+              }
+            }
+          ]
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -71,10 +99,38 @@
         "projection": "rigid",
         "is_priority": true,
         "condition": {
-          "type": "yungsapi:piece_in_horizontal_direction",
-          "pieces": ["*"],
-          "range": 5,
-          "rotation": "none"
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:piece_in_horizontal_direction",
+              "pieces": [
+                "*"
+              ],
+              "range": 5,
+              "rotation": "none"
+            },
+            {
+              "type": "yungsapi:not",
+              "condition": {
+                "type": "yungsapi:piece_in_horizontal_direction",
+                "pieces": [
+                  "betterfortresses:bridge/bridge_start_ruined_0",
+                  "betterfortresses:bridge/bridge_start_ruined_1",
+                  "betterfortresses:bridge/bridge_start_ruined_2",
+                  "betterfortresses:bridge/bridge_start_ruined_3",
+                  "betterfortresses:bridge/bridge_start_ruined_4",
+                  "betterfortresses:bridge/bridge_end_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_1",
+                  "betterfortresses:bridge/bridge_pillar_ruined_2",
+                  "betterfortresses:bridge/bridge_pillar_ruined_3",
+                  "betterfortresses:bridge/bridge_pillar_ruined_4"
+                ],
+                "range": 5,
+                "rotation": "none"
+              }
+            }
+          ]
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -96,10 +152,38 @@
         "projection": "rigid",
         "is_priority": true,
         "condition": {
-          "type": "yungsapi:piece_in_horizontal_direction",
-          "pieces": ["*"],
-          "range": 5,
-          "rotation": "none"
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:piece_in_horizontal_direction",
+              "pieces": [
+                "*"
+              ],
+              "range": 5,
+              "rotation": "none"
+            },
+            {
+              "type": "yungsapi:not",
+              "condition": {
+                "type": "yungsapi:piece_in_horizontal_direction",
+                "pieces": [
+                  "betterfortresses:bridge/bridge_start_ruined_0",
+                  "betterfortresses:bridge/bridge_start_ruined_1",
+                  "betterfortresses:bridge/bridge_start_ruined_2",
+                  "betterfortresses:bridge/bridge_start_ruined_3",
+                  "betterfortresses:bridge/bridge_start_ruined_4",
+                  "betterfortresses:bridge/bridge_end_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_1",
+                  "betterfortresses:bridge/bridge_pillar_ruined_2",
+                  "betterfortresses:bridge/bridge_pillar_ruined_3",
+                  "betterfortresses:bridge/bridge_pillar_ruined_4"
+                ],
+                "range": 5,
+                "rotation": "none"
+              }
+            }
+          ]
         },
         "element_type": "yungsapi:yung_single_element"
       }
