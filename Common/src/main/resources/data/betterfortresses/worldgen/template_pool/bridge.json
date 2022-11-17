@@ -22,122 +22,7 @@
           ]
         },
         "enhanced_terrain_adaptation": "none",
-        "deadend_adjustment": true,
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_start_ruined_0",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_start_ruined_1",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_start_ruined_2",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_start_ruined_3",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_start_ruined_4",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -161,37 +46,14 @@
           ]
         },
         "enhanced_terrain_adaptation": "none",
-        "deadend_adjustment": true,
+        "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:bridge/bridge_end_ruined_0",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_stairs_r_test",
+        "location": "betterfortresses:bridge/bridge_stairs_r",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "bridge_stairs",
@@ -216,7 +78,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "betterfortresses:bridge/bridge_stairs_r_test",
+        "location": "betterfortresses:bridge/bridge_stairs_r",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "bridge_stairs",
@@ -260,121 +122,7 @@
           ]
         },
         "enhanced_terrain_adaptation": "none",
-        "deadend_adjustment": true,
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_pillar_ruined_0",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_pillar_ruined_1",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_pillar_ruined_2",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_pillar_ruined_3",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_pillar_ruined_4",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:depth",
-              "min_required_depth": 20
-            },
-            {
-              "type": "yungsapi:altitude",
-              "bottom_cutoff_y": 31
-            }
-          ]
-        },
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -398,7 +146,7 @@
             }
           ]
         },
-        "deadend_adjustment": true,
+        "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -461,25 +209,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": "none",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_junction_2_shelter",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:not",
-          "condition": {
-            "type": "yungsapi:piece_in_range",
-            "pieces": ["*"],
-            "above_range": 20,
-            "below_range": 20
-          }
-        },
         "enhanced_terrain_adaptation": "none",
         "element_type": "yungsapi:yung_single_element"
       }
@@ -548,25 +277,6 @@
       }
     },
     {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_junction_3_shelter",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:not",
-          "condition": {
-            "type": "yungsapi:piece_in_range",
-            "pieces": ["*"],
-            "above_range": 20,
-            "below_range": 20
-          }
-        },
-        "enhanced_terrain_adaptation": "none",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
       "weight": 10,
       "element": {
         "location": "betterfortresses:bridge/bridge_junction_4",
@@ -625,25 +335,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": "none",
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:bridge/bridge_junction_4_shelter",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "condition": {
-          "type": "yungsapi:not",
-          "condition": {
-            "type": "yungsapi:piece_in_range",
-            "pieces": ["*"],
-            "above_range": 20,
-            "below_range": 20
-          }
-        },
         "enhanced_terrain_adaptation": "none",
         "element_type": "yungsapi:yung_single_element"
       }
