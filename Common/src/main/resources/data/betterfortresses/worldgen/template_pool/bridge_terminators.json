@@ -30,6 +30,11 @@
                   "betterfortresses:bridge/bridge_start_ruined_2",
                   "betterfortresses:bridge/bridge_start_ruined_3",
                   "betterfortresses:bridge/bridge_start_ruined_4",
+                  "betterfortresses:bridge/bridge_start_long_ruined_0",
+                  "betterfortresses:bridge/bridge_start_long_ruined_1",
+                  "betterfortresses:bridge/bridge_start_long_ruined_2",
+                  "betterfortresses:bridge/bridge_start_long_ruined_3",
+                  "betterfortresses:bridge/bridge_start_long_ruined_4",
                   "betterfortresses:bridge/bridge_end_ruined_0",
                   "betterfortresses:bridge/bridge_pillar_ruined_0",
                   "betterfortresses:bridge/bridge_pillar_ruined_1",
@@ -94,6 +99,51 @@
     {
       "weight": 1,
       "element": {
+        "location": "betterfortresses:bridge/bridge_start_long_ruined_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_start_long_ruined_1",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_start_long_ruined_2",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_start_long_ruined_3",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_start_long_ruined_4",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+
+    {
+      "weight": 1,
+      "element": {
         "location": "betterfortresses:bridge/bridge_end_wall",
         "processors": "betterfortresses:main",
         "projection": "rigid",
@@ -119,6 +169,11 @@
                   "betterfortresses:bridge/bridge_start_ruined_2",
                   "betterfortresses:bridge/bridge_start_ruined_3",
                   "betterfortresses:bridge/bridge_start_ruined_4",
+                  "betterfortresses:bridge/bridge_start_long_ruined_0",
+                  "betterfortresses:bridge/bridge_start_long_ruined_1",
+                  "betterfortresses:bridge/bridge_start_long_ruined_2",
+                  "betterfortresses:bridge/bridge_start_long_ruined_3",
+                  "betterfortresses:bridge/bridge_start_long_ruined_4",
                   "betterfortresses:bridge/bridge_end_ruined_0",
                   "betterfortresses:bridge/bridge_pillar_ruined_0",
                   "betterfortresses:bridge/bridge_pillar_ruined_1",
@@ -172,6 +227,11 @@
                   "betterfortresses:bridge/bridge_start_ruined_2",
                   "betterfortresses:bridge/bridge_start_ruined_3",
                   "betterfortresses:bridge/bridge_start_ruined_4",
+                  "betterfortresses:bridge/bridge_start_long_ruined_0",
+                  "betterfortresses:bridge/bridge_start_long_ruined_1",
+                  "betterfortresses:bridge/bridge_start_long_ruined_2",
+                  "betterfortresses:bridge/bridge_start_long_ruined_3",
+                  "betterfortresses:bridge/bridge_start_long_ruined_4",
                   "betterfortresses:bridge/bridge_end_ruined_0",
                   "betterfortresses:bridge/bridge_pillar_ruined_0",
                   "betterfortresses:bridge/bridge_pillar_ruined_1",

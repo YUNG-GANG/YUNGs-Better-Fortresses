@@ -69,6 +69,48 @@
             }
           ]
         },
+        "modifiers": [
+          {
+            "condition": {
+              "type": "yungsapi:piece_in_range",
+              "pieces": [
+                "betterfortresses:bridge/bridge_pillar",
+                "betterfortresses:bridge/bridge_pillar_ruined_0",
+                "betterfortresses:bridge/bridge_pillar_ruined_1",
+                "betterfortresses:bridge/bridge_pillar_ruined_2",
+                "betterfortresses:bridge/bridge_pillar_ruined_3",
+                "betterfortresses:bridge/bridge_pillar_ruined_4",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_junction_3_shelter",
+                "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_stairs_r",
+                "betterfortresses:bridge/bridge_stairs_l",
+                "betterfortresses:bridge/blaze_stairs",
+                "betterfortresses:bridge/blaze_stairs_ruined_0",
+                "betterfortresses:bridge/blaze_stairs_ruined_1",
+                "betterfortresses:blaze/blaze_0",
+                "betterfortresses:blaze/blaze_broken_0_l",
+                "betterfortresses:blaze/blaze_broken_0_r",
+                "betterfortresses:blaze/blaze_broken_1_l",
+                "betterfortresses:blaze/blaze_broken_1_r",
+                "betterfortresses:blaze/blaze_broken_2_l",
+                "betterfortresses:blaze/blaze_broken_2_r",
+                "betterfortresses:blaze/blaze_broken_3_l",
+                "betterfortresses:blaze/blaze_broken_3_r",
+                "betterfortresses:blaze/blaze_broken_4_l",
+                "betterfortresses:blaze/blaze_broken_4_r"
+              ],
+              "above_range": 20
+            },
+            "target_selector": {
+              "type": "yungsapi:self"
+            },
+            "action": {
+              "type": "yungsapi:transform",
+              "output": ["betterfortresses:bridge/bridge_pillar_covered"]
+            }
+          }
+        ],
         "enhanced_terrain_adaptation": "none",
         "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
@@ -81,7 +123,7 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "bridge_stairs",
-        "max_count": 3,
+        "max_count": 2,
         "condition": {
           "type": "yungsapi:all_of",
           "conditions": [
@@ -92,6 +134,40 @@
             {
               "type": "yungsapi:altitude",
               "bottom_cutoff_y": 31
+            },
+            {
+              "type": "yungsapi:not",
+              "condition": {
+                "type": "yungsapi:piece_in_range",
+                "pieces": [
+                  "betterfortresses:bridge/bridge_pillar",
+                  "betterfortresses:bridge/bridge_pillar_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_1",
+                  "betterfortresses:bridge/bridge_pillar_ruined_2",
+                  "betterfortresses:bridge/bridge_pillar_ruined_3",
+                  "betterfortresses:bridge/bridge_pillar_ruined_4",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_junction_3_shelter",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_stairs_r",
+                  "betterfortresses:bridge/bridge_stairs_l",
+                  "betterfortresses:bridge/blaze_stairs",
+                  "betterfortresses:bridge/blaze_stairs_ruined_0",
+                  "betterfortresses:bridge/blaze_stairs_ruined_1",
+                  "betterfortresses:blaze/blaze_0",
+                  "betterfortresses:blaze/blaze_broken_0_l",
+                  "betterfortresses:blaze/blaze_broken_0_r",
+                  "betterfortresses:blaze/blaze_broken_1_l",
+                  "betterfortresses:blaze/blaze_broken_1_r",
+                  "betterfortresses:blaze/blaze_broken_2_l",
+                  "betterfortresses:blaze/blaze_broken_2_r",
+                  "betterfortresses:blaze/blaze_broken_3_l",
+                  "betterfortresses:blaze/blaze_broken_3_r",
+                  "betterfortresses:blaze/blaze_broken_4_l",
+                  "betterfortresses:blaze/blaze_broken_4_r"
+                ],
+                "above_range": 20
+              }
             }
           ]
         },
@@ -104,7 +180,7 @@
         "location": "betterfortresses:bridge/bridge_stairs_r",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "name": "bridge_stairs",
+        "name": "bridge_stairs_forced",
         "max_count": 3,
         "condition": {
           "type": "yungsapi:all_of",
@@ -117,6 +193,158 @@
             {
               "type": "yungsapi:altitude",
               "bottom_cutoff_y": 31
+            },
+            {
+              "type": "yungsapi:not",
+              "condition": {
+                "type": "yungsapi:piece_in_range",
+                "pieces": [
+                  "betterfortresses:bridge/bridge_pillar",
+                  "betterfortresses:bridge/bridge_pillar_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_1",
+                  "betterfortresses:bridge/bridge_pillar_ruined_2",
+                  "betterfortresses:bridge/bridge_pillar_ruined_3",
+                  "betterfortresses:bridge/bridge_pillar_ruined_4",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_junction_3_shelter",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_stairs_r",
+                  "betterfortresses:bridge/bridge_stairs_l",
+                  "betterfortresses:bridge/blaze_stairs",
+                  "betterfortresses:bridge/blaze_stairs_ruined_0",
+                  "betterfortresses:bridge/blaze_stairs_ruined_1",
+                  "betterfortresses:blaze/blaze_0",
+                  "betterfortresses:blaze/blaze_broken_0_l",
+                  "betterfortresses:blaze/blaze_broken_0_r",
+                  "betterfortresses:blaze/blaze_broken_1_l",
+                  "betterfortresses:blaze/blaze_broken_1_r",
+                  "betterfortresses:blaze/blaze_broken_2_l",
+                  "betterfortresses:blaze/blaze_broken_2_r",
+                  "betterfortresses:blaze/blaze_broken_3_l",
+                  "betterfortresses:blaze/blaze_broken_3_r",
+                  "betterfortresses:blaze/blaze_broken_4_l",
+                  "betterfortresses:blaze/blaze_broken_4_r"
+                ],
+                "above_range": 20
+              }
+            }
+          ]
+        },
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_stairs_l",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "bridge_stairs",
+        "max_count": 2,
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
+              "max_possible_depth": 40
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 31
+            },
+            {
+              "type": "yungsapi:not",
+              "condition": {
+                "type": "yungsapi:piece_in_range",
+                "pieces": [
+                  "betterfortresses:bridge/bridge_pillar",
+                  "betterfortresses:bridge/bridge_pillar_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_1",
+                  "betterfortresses:bridge/bridge_pillar_ruined_2",
+                  "betterfortresses:bridge/bridge_pillar_ruined_3",
+                  "betterfortresses:bridge/bridge_pillar_ruined_4",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_junction_3_shelter",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_stairs_r",
+                  "betterfortresses:bridge/bridge_stairs_l",
+                  "betterfortresses:bridge/blaze_stairs",
+                  "betterfortresses:bridge/blaze_stairs_ruined_0",
+                  "betterfortresses:bridge/blaze_stairs_ruined_1",
+                  "betterfortresses:blaze/blaze_0",
+                  "betterfortresses:blaze/blaze_broken_0_l",
+                  "betterfortresses:blaze/blaze_broken_0_r",
+                  "betterfortresses:blaze/blaze_broken_1_l",
+                  "betterfortresses:blaze/blaze_broken_1_r",
+                  "betterfortresses:blaze/blaze_broken_2_l",
+                  "betterfortresses:blaze/blaze_broken_2_r",
+                  "betterfortresses:blaze/blaze_broken_3_l",
+                  "betterfortresses:blaze/blaze_broken_3_r",
+                  "betterfortresses:blaze/blaze_broken_4_l",
+                  "betterfortresses:blaze/blaze_broken_4_r"
+                ],
+                "above_range": 20
+              }
+            }
+          ]
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:bridge/bridge_stairs_l",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "bridge_stairs_forced",
+        "max_count": 3,
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
+              "min_required_depth": 15,
+              "max_possible_depth": 40
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 31
+            },
+            {
+              "type": "yungsapi:not",
+              "condition": {
+                "type": "yungsapi:piece_in_range",
+                "pieces": [
+                  "betterfortresses:bridge/bridge_pillar",
+                  "betterfortresses:bridge/bridge_pillar_ruined_0",
+                  "betterfortresses:bridge/bridge_pillar_ruined_1",
+                  "betterfortresses:bridge/bridge_pillar_ruined_2",
+                  "betterfortresses:bridge/bridge_pillar_ruined_3",
+                  "betterfortresses:bridge/bridge_pillar_ruined_4",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_junction_3_shelter",
+                  "betterfortresses:bridge/bridge_junction_2_shelter",
+                  "betterfortresses:bridge/bridge_stairs_r",
+                  "betterfortresses:bridge/bridge_stairs_l",
+                  "betterfortresses:bridge/blaze_stairs",
+                  "betterfortresses:bridge/blaze_stairs_ruined_0",
+                  "betterfortresses:bridge/blaze_stairs_ruined_1",
+                  "betterfortresses:blaze/blaze_0",
+                  "betterfortresses:blaze/blaze_broken_0_l",
+                  "betterfortresses:blaze/blaze_broken_0_r",
+                  "betterfortresses:blaze/blaze_broken_1_l",
+                  "betterfortresses:blaze/blaze_broken_1_r",
+                  "betterfortresses:blaze/blaze_broken_2_l",
+                  "betterfortresses:blaze/blaze_broken_2_r",
+                  "betterfortresses:blaze/blaze_broken_3_l",
+                  "betterfortresses:blaze/blaze_broken_3_r",
+                  "betterfortresses:blaze/blaze_broken_4_l",
+                  "betterfortresses:blaze/blaze_broken_4_r"
+                ],
+                "above_range": 20
+              }
             }
           ]
         },
@@ -181,6 +409,8 @@
                 "betterfortresses:bridge/bridge_junction_2_shelter",
                 "betterfortresses:bridge/bridge_junction_3_shelter",
                 "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_stairs_r",
+                "betterfortresses:bridge/bridge_stairs_l",
                 "betterfortresses:bridge/blaze_stairs",
                 "betterfortresses:bridge/blaze_stairs_ruined_0",
                 "betterfortresses:bridge/blaze_stairs_ruined_1",
@@ -244,6 +474,8 @@
                 "betterfortresses:bridge/bridge_junction_2_shelter",
                 "betterfortresses:bridge/bridge_junction_3_shelter",
                 "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_stairs_r",
+                "betterfortresses:bridge/bridge_stairs_l",
                 "betterfortresses:bridge/blaze_stairs",
                 "betterfortresses:bridge/blaze_stairs_ruined_0",
                 "betterfortresses:bridge/blaze_stairs_ruined_1",
@@ -275,7 +507,7 @@
       }
     },
     {
-      "weight": 10,
+      "weight": 5,
       "element": {
         "location": "betterfortresses:bridge/bridge_junction_4",
         "processors": "betterfortresses:main",
@@ -307,6 +539,8 @@
                 "betterfortresses:bridge/bridge_junction_2_shelter",
                 "betterfortresses:bridge/bridge_junction_3_shelter",
                 "betterfortresses:bridge/bridge_junction_2_shelter",
+                "betterfortresses:bridge/bridge_stairs_r",
+                "betterfortresses:bridge/bridge_stairs_l",
                 "betterfortresses:bridge/blaze_stairs",
                 "betterfortresses:bridge/blaze_stairs_ruined_0",
                 "betterfortresses:bridge/blaze_stairs_ruined_1",
