@@ -8,7 +8,10 @@
         "location": "betterfortresses:keep",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
+        "element_type": "yungsapi:yung_single_element"
       }
     }
   ]

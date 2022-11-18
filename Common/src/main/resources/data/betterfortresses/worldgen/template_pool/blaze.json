@@ -10,7 +10,9 @@
         "projection": "rigid",
         "name": "blaze",
         "max_count": 3,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -22,7 +24,9 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
@@ -38,10 +42,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -54,10 +60,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -70,10 +78,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -86,10 +96,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -102,10 +114,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -118,10 +132,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -134,10 +150,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -150,10 +168,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -166,10 +186,12 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": "carved_top_no_beard_large",
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }

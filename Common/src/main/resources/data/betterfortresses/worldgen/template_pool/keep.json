@@ -9,6 +9,9 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "ignore_bounds": true,
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -19,6 +22,9 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "ignore_bounds": false,
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -29,6 +35,9 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "ignore_bounds": false,
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     }

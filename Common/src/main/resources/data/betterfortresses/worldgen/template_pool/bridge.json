@@ -21,7 +21,9 @@
             }
           ]
         },
-        "enhanced_terrain_adaptation": "none",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
@@ -45,7 +47,9 @@
             }
           ]
         },
-        "enhanced_terrain_adaptation": "none",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
@@ -111,7 +115,9 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": "none",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
@@ -171,6 +177,9 @@
             }
           ]
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -231,6 +240,9 @@
           ]
         },
         "is_priority": true,
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -288,6 +300,9 @@
               }
             }
           ]
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -349,6 +364,9 @@
           ]
         },
         "is_priority": true,
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -373,6 +391,9 @@
           ]
         },
         "deadend_pool": "betterfortresses:bridge_terminators",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -437,7 +458,9 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": "none",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -502,7 +525,9 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": "none",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -567,7 +592,9 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": "none",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     }
