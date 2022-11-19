@@ -3,15 +3,38 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 10,
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:blaze/blaze_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_forced",
+        "max_count": 2,
+        "is_priority": true,
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:carved_top_no_beard_large"
+        },
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 25
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 5,
       "element": {
         "location": "betterfortresses:blaze/blaze_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "blaze",
-        "max_count": 3,
+        "max_count": 2,
         "enhanced_terrain_adaptation": {
           "type": "yungsapi:carved_top_no_beard_large"
+        },
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 28
         },
         "element_type": "yungsapi:yung_single_element"
       }
