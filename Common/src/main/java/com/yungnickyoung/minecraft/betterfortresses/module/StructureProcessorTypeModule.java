@@ -4,6 +4,7 @@ import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.services.Services;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.BridgeArchProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.LiquidBlockProcessor;
+import com.yungnickyoung.minecraft.betterfortresses.world.processor.NetherWartProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.PillarProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.StairPillarProcessor;
 import com.yungnickyoung.minecraft.yungsapi.api.autoregister.AutoRegister;
@@ -23,6 +24,9 @@ public class StructureProcessorTypeModule {
 
     @AutoRegister("liquid_block_processor")
     public static StructureProcessorType<LiquidBlockProcessor> LIQUID_BLOCK_PROCESSOR = () -> LiquidBlockProcessor.CODEC;
+
+    @AutoRegister("nether_wart_processor")
+    public static StructureProcessorType<NetherWartProcessor> NETHER_WART_PROCESSOR = () -> NetherWartProcessor.CODEC;
 
     @AutoRegister("item_frame_processor")
     public static StructureProcessorType<StructureProcessor> ITEM_FRAME_PROCESSOR = Services.PROCESSORS::itemFrameProcessorCodec;

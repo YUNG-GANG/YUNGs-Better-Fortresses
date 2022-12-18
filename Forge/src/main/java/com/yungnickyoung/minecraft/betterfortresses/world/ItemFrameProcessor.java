@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -46,17 +47,19 @@ public class ItemFrameProcessor extends StructureProcessor {
 
             // Set the item in the item frame's NBT
             CompoundTag newNBT = globalEntityInfo.nbt.copy();
-//            if (item.equals("\"minecraft:iron_sword\"")) { // Armoury pool
-//                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getArmouryItem(random)).toString();
-//                if (!randomItemString.equals("minecraft:air")) {
-//                    newNBT.getCompound("Item").putString("id", randomItemString);
-//                }
-//            } else if (item.equals("\"minecraft:bread\"")) { // Storage pool
-//                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getStorageItem(random)).toString();
-//                if (!randomItemString.equals("minecraft:air")) {
-//                    newNBT.getCompound("Item").putString("id", randomItemString);
-//                }
-//            }
+            if (item.equals("\"minecraft:stone_sword\"")) { // Weapon pool
+                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getWeaponItem(random)).toString();
+                if (randomItemString.equals("minecraft:air")) {
+                    return null;
+                }
+                newNBT.getCompound("Item").putString("id", randomItemString);
+            } else if (item.equals("\"minecraft:iron_ingot\"")) { // Loot pool
+                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getLootItem(random)).toString();
+                if (randomItemString.equals("minecraft:air")) {
+                    return null;
+                }
+                newNBT.getCompound("Item").putString("id", randomItemString);
+            }
 
             // Required to suppress dumb log spam
             newNBT.putInt("TileX", globalEntityInfo.blockPos.getX());
@@ -64,7 +67,7 @@ public class ItemFrameProcessor extends StructureProcessor {
             newNBT.putInt("TileZ", globalEntityInfo.blockPos.getZ());
 
             // Randomize rotation
-            int minRotation = item.equals("minecraft:chiseled_nether_bricks") ? 1 : 0;
+            int minRotation = item.equals("minecraft:chiseled_nether_bricks") ? 1 : 0; // Special case for puzzle room
             int randomRotation = Mth.randomBetweenInclusive(random, minRotation, 7);
             newNBT.putByte("ItemRotation", (byte) randomRotation);
 
