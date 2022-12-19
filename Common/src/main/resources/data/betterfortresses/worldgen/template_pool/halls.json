@@ -21,7 +21,7 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 12,
       "element": {
         "location": "betterfortresses:halls/hall_straight_prop",
         "processors": "betterfortresses:main",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 12,
       "element": {
         "location": "betterfortresses:halls/hall_3_prop",
         "processors": "betterfortresses:main",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/hall_turn_left_prop_0",
         "processors": "betterfortresses:main",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/hall_turn_left_prop_1",
         "processors": "betterfortresses:main",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 12,
       "element": {
         "location": "betterfortresses:halls/hall_straight_decor",
         "processors": "betterfortresses:main",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 12,
       "element": {
         "location": "betterfortresses:halls/hall_3_decor",
         "processors": "betterfortresses:main",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "weight": 4,
+      "weight": 8,
       "element": {
         "location": "betterfortresses:halls/hall_turn_left_decor",
         "processors": "betterfortresses:main",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 12,
       "element": {
         "location": "betterfortresses:halls/hall_straight",
         "processors": "betterfortresses:main",
@@ -113,7 +113,7 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 12,
       "element": {
         "location": "betterfortresses:halls/hall_3",
         "processors": "betterfortresses:main",
@@ -126,7 +126,7 @@
       }
     },
     {
-      "weight": 4,
+      "weight": 8,
       "element": {
         "location": "betterfortresses:halls/hall_turn_left",
         "processors": "betterfortresses:main",
@@ -139,7 +139,7 @@
       }
     },
     {
-      "weight": 10,
+      "weight": 20,
       "element": {
         "location": "betterfortresses:halls/hall_4",
         "processors": "betterfortresses:main",
@@ -153,7 +153,7 @@
     },
     // Small rooms
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/quarters_sm",
         "processors": "betterfortresses:main",
@@ -168,7 +168,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/officer_sm",
         "processors": "betterfortresses:main",
@@ -183,7 +183,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/storeroom_sm_0",
         "processors": "betterfortresses:main",
@@ -198,7 +198,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2
       "element": {
         "location": "betterfortresses:halls/room/storeroom_sm_1",
         "processors": "betterfortresses:main",
@@ -213,7 +213,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/study_sm",
         "processors": "betterfortresses:main",
@@ -228,7 +228,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "betterfortresses:halls/room/a_very_ethical_room",
         "processors": "betterfortresses:main",
@@ -244,7 +244,7 @@
     },
     // Medium rooms (left/right)
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/mess_md_l_0",
         "processors": "betterfortresses:main",
@@ -259,7 +259,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/mess_md_r_0",
         "processors": "betterfortresses:main",
@@ -274,7 +274,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/study_md_l_0",
         "processors": "betterfortresses:main",
@@ -289,7 +289,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/study_md_r_0",
         "processors": "betterfortresses:main",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/jail_md_l_0",
         "processors": "betterfortresses:main",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/jail_md_r_0",
         "processors": "betterfortresses:main",
@@ -334,7 +334,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/quarters_md_l_0",
         "processors": "betterfortresses:main",
@@ -349,7 +349,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/quarters_md_r_0",
         "processors": "betterfortresses:main",
@@ -425,7 +425,7 @@
     },
     // Medium rooms (side)
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "betterfortresses:halls/room/puzzle_md_side_0",
         "processors": "betterfortresses:main",
@@ -440,13 +440,13 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "betterfortresses:halls/room/obsidan_md_side_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "obsidian_room",
-        "max_count": 2,
+        "max_count": 1,
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 16
