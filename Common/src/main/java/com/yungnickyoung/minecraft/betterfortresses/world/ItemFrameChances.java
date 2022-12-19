@@ -1,6 +1,6 @@
 package com.yungnickyoung.minecraft.betterfortresses.world;
 
-import com.yungnickyoung.minecraft.yungsapi.api.world.randomize.ItemRandomizer;
+import com.yungnickyoung.minecraft.yungsapi.world.ItemRandomizer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -37,10 +37,21 @@ public class ItemFrameChances {
                 .addItem(Items.SHIELD, .025f);
 
         lootItems = new ItemRandomizer(Items.AIR)
-                .addItem(Items.GOLD_NUGGET, .05f)
-                .addItem(Items.GOLD_INGOT, .05f)
-                .addItem(Items.NETHER_WART, .05f)
-                .addItem(Items.NETHERITE_SCRAP, .005f);
+                .addItem(Items.GOLD_NUGGET, .1f)
+                .addItem(Items.GOLD_INGOT, .1f)
+                .addItem(Items.NETHER_WART, .1f)
+                .addItem(Items.NETHERITE_SCRAP, .01f);
+
+        studyItems = new ItemRandomizer(Items.AIR)
+                .addItem(Items.BOOK, .4f)
+                .addItem(Items.PAPER, .1f)
+                .addItem(Items.WRITABLE_BOOK, .1f)
+                .addItem(Items.ENCHANTED_BOOK, .1f);
+
+        messHallItems = new ItemRandomizer(Items.AIR)
+                .addItem(Items.PORKCHOP, .2f)
+                .addItem(Items.COOKED_PORKCHOP, .2f)
+                .addItem(Items.GOLD_INGOT, .2f);
     }
 
     /**
@@ -49,6 +60,8 @@ public class ItemFrameChances {
 
     private ItemRandomizer weaponItems;
     private ItemRandomizer lootItems;
+    private ItemRandomizer studyItems;
+    private ItemRandomizer messHallItems;
 
     public Item getWeaponItem(RandomSource randomSource) {
         return weaponItems.get(randomSource);
@@ -56,5 +69,13 @@ public class ItemFrameChances {
 
     public Item getLootItem(RandomSource randomSource) {
         return lootItems.get(randomSource);
+    }
+
+    public Item getStudyItem(RandomSource randomSource) {
+        return studyItems.get(randomSource);
+    }
+
+    public Item getMessHallItem(RandomSource randomSource) {
+        return messHallItems.get(randomSource);
     }
 }

@@ -4,9 +4,11 @@ import com.mojang.serialization.Codec;
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import com.yungnickyoung.minecraft.yungsapi.world.processor.StructureEntityProcessor;
+import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
@@ -54,6 +56,39 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                 newNBT.getCompound("Item").putString("id", randomItemString);
             } else if (item.equals("\"minecraft:iron_ingot\"")) { // Loot pool
                 String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getLootItem(random)).toString();
+                if (randomItemString.equals("minecraft:air")) {
+                    return null;
+                }
+                newNBT.getCompound("Item").putString("id", randomItemString);
+            } else if (item.equals("\"minecraft:cobweb\"")) { // Study pool
+                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getStudyItem(random)).toString();
+                if (randomItemString.equals("minecraft:air")) {
+                    return null;
+                }
+                // Special case: enchanted books
+                if (randomItemString.equals("minecraft:enchanted_book")) {
+                    // Choose enchantment and level
+                    float f = random.nextFloat();
+                    String enchantment;
+                    if (f < 0.2f) enchantment = "minecraft:fire_aspect";
+                    else if (f < 0.4f) enchantment = "minecraft:fire_protection";
+                    else if (f < 0.6f) enchantment = "minecraft:flame";
+                    else if (f < 0.8f) enchantment = "minecraft:smite";
+                    else enchantment = "minecraft:binding_curse";
+                    int lvl = random.nextFloat() < 0.75f ? 1 : 2;
+                    CompoundTag tag = new CompoundTag();
+                    ListTag storedEnchantments = Util.make(new ListTag(), listTag -> listTag.add(
+                            Util.make(new CompoundTag(), compoundTag -> {
+                                compoundTag.putShort("lvl", (short) lvl);
+                                compoundTag.putString("id", enchantment);
+                            })
+                    ));
+                    tag.put("StoredEnchantments", storedEnchantments);
+                    newNBT.getCompound("Item").put("tag", tag);
+                }
+                newNBT.getCompound("Item").putString("id", randomItemString);
+            } else if (item.equals("\"minecraft:apple\"")) { // Mess Hall pool
+                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getMessHallItem(random)).toString();
                 if (randomItemString.equals("minecraft:air")) {
                     return null;
                 }
