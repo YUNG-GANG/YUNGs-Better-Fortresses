@@ -424,21 +424,21 @@
       }
     },
     // Medium rooms (side)
-    {
-      "weight": 1,
-      "element": {
-        "location": "betterfortresses:halls/room/puzzle_md_side_0",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "name": "puzzle_md_side_0",
-        "max_count": 1,
-        "condition": {
-          "type": "yungsapi:depth",
-          "min_required_depth": 16
-        },
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
+//    {
+//      "weight": 1,
+//      "element": {
+//        "location": "betterfortresses:halls/room/puzzle_md_side_0",
+//        "processors": "betterfortresses:main",
+//        "projection": "rigid",
+//        "name": "puzzle_md_side_0",
+//        "max_count": 1,
+//        "condition": {
+//          "type": "yungsapi:depth",
+//          "min_required_depth": 16
+//        },
+//        "element_type": "yungsapi:yung_single_element"
+//      }
+//    },
     {
       "weight": 1,
       "element": {
