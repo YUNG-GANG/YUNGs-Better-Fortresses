@@ -81,21 +81,65 @@
         {
           "type": "minecraft:item",
           "weight": 10,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:iron_horse_armor"
         },
         {
           "type": "minecraft:item",
           "weight": 7,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:golden_horse_armor"
         },
         {
           "type": "minecraft:item",
           "weight": 4,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:diamond_horse_armor"
         },
         {
           "type": "minecraft:item",
           "weight": 20,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:stone_sword"
         },
         {
@@ -106,6 +150,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 10,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:stone_sword"
@@ -113,6 +166,17 @@
         {
           "type": "minecraft:item",
           "weight": 10,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:iron_sword"
         },
         {
@@ -123,6 +187,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 20,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:iron_sword"
@@ -130,6 +203,17 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:golden_sword"
         },
         {
@@ -140,6 +224,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 30,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:golden_sword"
@@ -147,6 +240,17 @@
         {
           "type": "minecraft:item",
           "weight": 20,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:leather_helmet"
         },
         {
@@ -157,6 +261,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 10,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:leather_helmet"
@@ -164,6 +277,17 @@
         {
           "type": "minecraft:item",
           "weight": 10,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:chainmail_helmet"
         },
         {
@@ -174,6 +298,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 20,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:chainmail_helmet"
@@ -181,6 +314,17 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:golden_helmet"
         },
         {
@@ -191,6 +335,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 30,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:golden_helmet"
@@ -198,6 +351,17 @@
         {
           "type": "minecraft:item",
           "weight": 20,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:leather_chestplate"
         },
         {
@@ -208,6 +372,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 10,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:leather_chestplate"
@@ -215,6 +388,17 @@
         {
           "type": "minecraft:item",
           "weight": 10,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:chainmail_chestplate"
         },
         {
@@ -225,6 +409,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 20,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:chainmail_chestplate"
@@ -232,6 +425,17 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:golden_chestplate"
         },
         {
@@ -242,6 +446,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 30,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:golden_chestplate"
@@ -249,6 +462,17 @@
         {
           "type": "minecraft:item",
           "weight": 20,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:leather_leggings"
         },
         {
@@ -259,6 +483,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 10,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:leather_leggings"
@@ -266,6 +499,17 @@
         {
           "type": "minecraft:item",
           "weight": 10,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:chainmail_leggings"
         },
         {
@@ -276,6 +520,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 20,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:chainmail_leggings"
@@ -283,6 +536,17 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:golden_leggings"
         },
         {
@@ -293,6 +557,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 30,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:golden_leggings"
@@ -300,6 +573,17 @@
         {
           "type": "minecraft:item",
           "weight": 20,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:leather_boots"
         },
         {
@@ -310,6 +594,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 10,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:leather_boots"
@@ -317,6 +610,17 @@
         {
           "type": "minecraft:item",
           "weight": 10,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:chainmail_boots"
         },
         {
@@ -327,6 +631,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 20,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:chainmail_boots"
@@ -334,6 +647,17 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "functions": [
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
           "name": "minecraft:golden_boots"
         },
         {
@@ -344,6 +668,15 @@
               "function": "minecraft:enchant_with_levels",
               "levels": 30,
               "treasure": true
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.8,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:golden_boots"
