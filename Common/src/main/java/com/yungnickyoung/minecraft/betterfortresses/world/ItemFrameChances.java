@@ -37,10 +37,9 @@ public class ItemFrameChances {
                 .addItem(Items.SHIELD, .025f);
 
         lootItems = new ItemRandomizer(Items.AIR)
-                .addItem(Items.GOLD_NUGGET, .1f)
+                .addItem(Items.GOLD_NUGGET, .2f)
                 .addItem(Items.GOLD_INGOT, .1f)
-                .addItem(Items.NETHER_WART, .1f)
-                .addItem(Items.NETHERITE_SCRAP, .01f);
+                .addItem(Items.NETHER_WART, .1f);
 
         studyItems = new ItemRandomizer(Items.AIR)
                 .addItem(Items.BOOK, .4f)
@@ -49,8 +48,8 @@ public class ItemFrameChances {
                 .addItem(Items.ENCHANTED_BOOK, .1f);
 
         messHallItems = new ItemRandomizer(Items.AIR)
-                .addItem(Items.PORKCHOP, .2f)
-                .addItem(Items.COOKED_PORKCHOP, .2f)
+                .addItem(Items.PORKCHOP, .3f)
+                .addItem(Items.COOKED_PORKCHOP, .3f)
                 .addItem(Items.GOLD_INGOT, .2f);
     }
 

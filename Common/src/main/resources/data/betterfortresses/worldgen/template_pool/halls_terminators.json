@@ -43,7 +43,7 @@
     },
     // Small rooms
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/quarters_sm",
         "processors": "betterfortresses:main",
@@ -53,13 +53,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/officer_sm",
         "processors": "betterfortresses:main",
@@ -69,13 +69,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/storeroom_sm_0",
         "processors": "betterfortresses:main",
@@ -85,13 +85,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/storeroom_sm_1",
         "processors": "betterfortresses:main",
@@ -101,13 +101,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 2,
+      "weight": 8,
       "element": {
         "location": "betterfortresses:halls/room/study_sm",
         "processors": "betterfortresses:main",
@@ -117,13 +117,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "betterfortresses:halls/room/a_very_ethical_room",
         "processors": "betterfortresses:main",
@@ -133,46 +133,46 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     // Medium rooms (left/right)
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/mess_md_l_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "mess",
-        "max_count": 2,
+        "max_count": 1,
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/mess_md_r_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "mess",
-        "max_count": 2,
+        "max_count": 1,
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/study_md_l_0",
         "processors": "betterfortresses:main",
@@ -182,13 +182,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/study_md_r_0",
         "processors": "betterfortresses:main",
@@ -198,13 +198,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/jail_md_l_0",
         "processors": "betterfortresses:main",
@@ -214,13 +214,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/jail_md_r_0",
         "processors": "betterfortresses:main",
@@ -230,13 +230,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/quarters_md_l_0",
         "processors": "betterfortresses:main",
@@ -246,13 +246,13 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "betterfortresses:halls/room/quarters_md_r_0",
         "processors": "betterfortresses:main",
@@ -262,7 +262,7 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -278,7 +278,7 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -294,7 +294,7 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -310,7 +310,7 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -326,40 +326,40 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
     },
     // Medium rooms (side)
+//    {
+//      "weight": 2,
+//      "element": {
+//        "location": "betterfortresses:halls/room/puzzle_md_side_0",
+//        "processors": "betterfortresses:main",
+//        "projection": "rigid",
+//        "name": "puzzle_md_side_0",
+//        "max_count": 1,
+//        "is_priority": true,
+//        "condition": {
+//          "type": "yungsapi:depth",
+//          "min_required_depth": 16
+//        },
+//        "element_type": "yungsapi:yung_single_element"
+//      }
+//    },
     {
-      "weight": 2,
-      "element": {
-        "location": "betterfortresses:halls/room/puzzle_md_side_0",
-        "processors": "betterfortresses:main",
-        "projection": "rigid",
-        "name": "puzzle_md_side_0",
-        "max_count": 1,
-        "is_priority": true,
-        "condition": {
-          "type": "yungsapi:depth",
-          "min_required_depth": 10
-        },
-        "element_type": "yungsapi:yung_single_element"
-      }
-    },
-    {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "betterfortresses:halls/room/obsidan_md_side_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "obsidian_room",
-        "max_count": 2,
+        "max_count": 1,
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -375,7 +375,7 @@
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 10
+          "min_required_depth": 16
         },
         "element_type": "yungsapi:yung_single_element"
       }
