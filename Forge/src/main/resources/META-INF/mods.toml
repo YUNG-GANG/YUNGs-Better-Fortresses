@@ -1,7 +1,7 @@
 modLoader="javafml"
 loaderVersion="[43,)"
 license="LGPLv3"
-issueTrackerURL="https://github.com/yungnickyoung/YUNGs-Better-Nether-Fortresses/issues"
+issueTrackerURL="https://github.com/yungnickyoung/YUNGs-Better-Fortresses/issues"
 
 [[mods]]
     modId="${mod_id}"
