@@ -19,6 +19,7 @@ import net.minecraft.world.level.levelgen.feature.BasaltColumnsFeature;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureStart;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -56,7 +57,7 @@ public class NoBasaltColumnsInStructuresMixin {
             return;
         }
 
-        if (yungsapi_getStructureAt(structureManager, mutableBlockPos, fortressStructure).isValid()) {
+        if (getStructureAt(structureManager, mutableBlockPos, fortressStructure).isValid()) {
             cir.setReturnValue(false);
         }
     }
@@ -65,8 +66,9 @@ public class NoBasaltColumnsInStructuresMixin {
      * The following methods are taken from vanilla, with slight tweaks to prevent log spam.
      */
 
-    private static StructureStart yungsapi_getStructureAt(StructureManager structureManager, BlockPos pos, Structure structure) {
-        for (StructureStart structurestart : yungsapi_startsForStructure(structureManager, SectionPos.of(pos), structure)) {
+    @Unique
+    private static StructureStart getStructureAt(StructureManager structureManager, BlockPos pos, Structure structure) {
+        for (StructureStart structurestart : startsForStructure(structureManager, SectionPos.of(pos), structure)) {
             if (structurestart.getBoundingBox().isInside(pos)) {
                 return structurestart;
             }
@@ -75,17 +77,19 @@ public class NoBasaltColumnsInStructuresMixin {
         return StructureStart.INVALID_START;
     }
 
-    private static List<StructureStart> yungsapi_startsForStructure(StructureManager structureManager, SectionPos sectionPos, Structure structure) {
+    @Unique
+    private static List<StructureStart> startsForStructure(StructureManager structureManager, SectionPos sectionPos, Structure structure) {
         LongSet longset = ((StructureManagerAccessor) structureManager).getLevel().getChunk(sectionPos.x(), sectionPos.z(), ChunkStatus.STRUCTURE_REFERENCES).getReferencesForStructure(structure);
         ImmutableList.Builder<StructureStart> builder = ImmutableList.builder();
-        yungsapi_fillStartsForStructure(structureManager, structure, longset, builder::add);
+        fillStartsForStructure(structureManager, structure, longset, builder::add);
         return builder.build();
     }
 
-    private static void yungsapi_fillStartsForStructure(StructureManager structureManager, Structure structure, LongSet longSet, Consumer<StructureStart> consumer) {
+    @Unique
+    private static void fillStartsForStructure(StructureManager structureManager, Structure structure, LongSet longSet, Consumer<StructureStart> consumer) {
         for (long i : longSet) {
             SectionPos sectionpos = SectionPos.of(new ChunkPos(i), ((StructureManagerAccessor) structureManager).getLevel().getMinSection());
-            Optional<ChunkAccess> structureAccess = yungsapi_getChunk((WorldGenRegion) ((StructureManagerAccessor) structureManager).getLevel(), sectionpos.x(), sectionpos.z());
+            Optional<ChunkAccess> structureAccess = getChunk((WorldGenRegion) ((StructureManagerAccessor) structureManager).getLevel(), sectionpos.x(), sectionpos.z());
             if (structureAccess.isPresent()) {
                 StructureStart structurestart = structureManager.getStartForStructure(sectionpos, structure, structureAccess.get());
                 if (structurestart != null && structurestart.isValid()) {
@@ -95,7 +99,8 @@ public class NoBasaltColumnsInStructuresMixin {
         }
     }
 
-    private static Optional<ChunkAccess> yungsapi_getChunk(WorldGenRegion worldGenRegion, int chunkX, int chunkZ) {
+    @Unique
+    private static Optional<ChunkAccess> getChunk(WorldGenRegion worldGenRegion, int chunkX, int chunkZ) {
         WorldGenRegionAccessor accessor = ((WorldGenRegionAccessor) worldGenRegion);
         if (worldGenRegion.hasChunk(chunkX, chunkZ)) {
             int i = chunkX - accessor.getFirstPos().x;
