@@ -171,6 +171,31 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
+    {
+      "weight": 6,
+      "element": {
+        "location": "betterfortresses:halls/hall_stairs",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "hall_stairs",
+        "max_count": 2,
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
+              "min_required_depth": 16,
+              "max_possible_depth": 28
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 4
+            }
+          ]
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
     // Small rooms
     {
       "weight": 4,
@@ -506,6 +531,33 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    // Large rooms
+    {
+      "weight": 20,
+      "element": {
+        "location": "betterfortresses:halls/room/better_portals",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "better_portals",
+        "max_count": 1,
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
+              "min_required_depth": 20,
+              "max_possible_depth": 28
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 4,
+              "top_cutoff_y": 30
+            }
+          ]
         },
         "element_type": "yungsapi:yung_single_element"
       }
