@@ -465,7 +465,7 @@
       }
     },
     {
-      "weight": 10,
+      "weight": 6,
       "element": {
         "location": "betterfortresses:bridge/bridge_junction_3",
         "processors": "betterfortresses:main",
@@ -532,7 +532,7 @@
       }
     },
     {
-      "weight": 5,
+      "weight": 3,
       "element": {
         "location": "betterfortresses:bridge/bridge_junction_4",
         "processors": "betterfortresses:main",

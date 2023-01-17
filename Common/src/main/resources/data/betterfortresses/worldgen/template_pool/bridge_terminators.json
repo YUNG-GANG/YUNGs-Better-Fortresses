@@ -15,7 +15,7 @@
             {
               "type": "yungsapi:piece_in_horizontal_direction",
               "pieces": [
-                "*"
+                "all"
               ],
               "range": 5,
               "rotation": "none"
@@ -187,7 +187,7 @@
             {
               "type": "yungsapi:piece_in_horizontal_direction",
               "pieces": [
-                "*"
+                "all"
               ],
               "range": 5,
               "rotation": "none"
@@ -251,7 +251,7 @@
             {
               "type": "yungsapi:piece_in_horizontal_direction",
               "pieces": [
-                "*"
+                "all"
               ],
               "range": 5,
               "rotation": "none"
@@ -373,7 +373,7 @@
           {
             "condition": {
               "type": "yungsapi:piece_in_horizontal_direction",
-              "pieces": ["*"],
+              "pieces": ["all"],
               "range": 5,
               "rotation": "none"
             },
@@ -415,7 +415,7 @@
           {
             "condition": {
               "type": "yungsapi:piece_in_horizontal_direction",
-              "pieces": ["*"],
+              "pieces": ["all"],
               "range": 5,
               "rotation": "none"
             },

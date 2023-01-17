@@ -13,11 +13,17 @@ repositories {
     maven { url "https://maven.terraformersmc.com/releases/" }
 }
 
+def useLocalYungsApi = findProject(':yungsapi') != null
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.officialMojangMappings()
-    modImplementation "com.yungnickyoung.minecraft.yungsapi:YungsApi:${minecraft_version}-Fabric-${yungsapi_version}"
-//    modImplementation files("libs/YungsApi-1.19.2-Fabric-3.8.4-beta3.jar")
+    // YUNG's API
+    if (useLocalYungsApi) {
+        modImplementation files("libs/YungsApi-${minecraft_version}-Fabric-${yungsapi_version}.jar")
+    } else {
+        modImplementation "com.yungnickyoung.minecraft.yungsapi:YungsApi:${minecraft_version}-Fabric-${yungsapi_version}"
+    }
     implementation("org.reflections:reflections:0.10.2")
     include("org.reflections:reflections:0.10.2")
 
