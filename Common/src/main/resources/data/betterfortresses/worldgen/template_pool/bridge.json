@@ -21,9 +21,6 @@
             }
           ]
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:none"
-        },
         "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
@@ -46,9 +43,6 @@
               "bottom_cutoff_y": 31
             }
           ]
-        },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:none"
         },
         "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
@@ -115,9 +109,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:none"
-        },
         "deadend_pool": "betterfortresses:bridge_terminators",
         "element_type": "yungsapi:yung_single_element"
       }
@@ -392,7 +383,11 @@
         },
         "deadend_pool": "betterfortresses:bridge_terminators",
         "enhanced_terrain_adaptation": {
-          "type": "yungsapi:carved_top_no_beard_large"
+          "type": "yungsapi:custom",
+          "carves": true,
+          "beards": false,
+          "kernel_size": 24,
+          "kernel_distance": 24
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -458,9 +453,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:none"
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -525,9 +517,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:none"
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -592,9 +581,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:none"
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     }

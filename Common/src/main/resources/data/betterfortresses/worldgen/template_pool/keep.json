@@ -23,7 +23,11 @@
         "projection": "rigid",
         "ignore_bounds": false,
         "enhanced_terrain_adaptation": {
-          "type": "yungsapi:carved_top_no_beard_large"
+          "type": "yungsapi:custom",
+          "carves": true,
+          "beards": false,
+          "kernel_size": 24,
+          "kernel_distance": 24
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -36,7 +40,11 @@
         "projection": "rigid",
         "ignore_bounds": false,
         "enhanced_terrain_adaptation": {
-          "type": "yungsapi:carved_top_no_beard_large"
+          "type": "yungsapi:custom",
+          "carves": true,
+          "beards": false,
+          "kernel_size": 24,
+          "kernel_distance": 24
         },
         "element_type": "yungsapi:yung_single_element"
       }
