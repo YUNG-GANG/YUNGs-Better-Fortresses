@@ -48,13 +48,6 @@
             }
           ]
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -64,13 +57,6 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -80,13 +66,6 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_1",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -96,13 +75,6 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_2",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -112,13 +84,6 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_3",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -128,13 +93,6 @@
         "location": "betterfortresses:bridge/bridge_start_ruined_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -144,13 +102,6 @@
         "location": "betterfortresses:bridge/bridge_start_long_ruined_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -160,13 +111,6 @@
         "location": "betterfortresses:bridge/bridge_start_long_ruined_1",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -176,13 +120,6 @@
         "location": "betterfortresses:bridge/bridge_start_long_ruined_2",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -192,13 +129,6 @@
         "location": "betterfortresses:bridge/bridge_start_long_ruined_3",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },    {
@@ -207,13 +137,6 @@
         "location": "betterfortresses:bridge/bridge_start_long_ruined_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -264,13 +187,6 @@
             }
           ]
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -280,13 +196,6 @@
         "location": "betterfortresses:bridge/bridge_end_ruined_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -336,13 +245,6 @@
             }
           ]
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -352,13 +254,6 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -368,13 +263,6 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_1",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -384,13 +272,6 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_2",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -400,13 +281,6 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_3",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -416,13 +290,6 @@
         "location": "betterfortresses:bridge/bridge_pillar_ruined_4",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -462,13 +329,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -508,13 +368,6 @@
             }
           }
         ],
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     }

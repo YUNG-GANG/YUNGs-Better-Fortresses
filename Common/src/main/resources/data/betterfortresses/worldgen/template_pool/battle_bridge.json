@@ -11,13 +11,6 @@
         "is_priority": true,
         "name": "battle_bridge_start",
         "max_count": 3,
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -27,13 +20,6 @@
         "location": "betterfortresses:battle_bridge/battle_bridge_straight",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -43,13 +29,6 @@
         "location": "betterfortresses:battle_bridge/battle_bridge_gate",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -59,13 +38,6 @@
         "location": "betterfortresses:battle_bridge/battle_bridge_split",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -75,13 +47,6 @@
         "location": "betterfortresses:battle_bridge/battle_bridge_pillar",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     }

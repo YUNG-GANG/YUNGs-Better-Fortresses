@@ -8,6 +8,9 @@
         "location": "betterfortresses:mobs/piglin",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -17,6 +20,9 @@
         "location": "betterfortresses:mobs/wither_skeleton",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     }

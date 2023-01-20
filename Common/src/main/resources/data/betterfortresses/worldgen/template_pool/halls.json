@@ -8,6 +8,9 @@
         "location": "betterfortresses:halls/halls_entrance_frame",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -17,6 +20,9 @@
         "location": "betterfortresses:halls/halls_entrance_tunnel",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -29,6 +35,9 @@
         "condition": {
           "type": "yungsapi:depth",
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -44,6 +53,9 @@
           "min_required_depth": 16,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -57,6 +69,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 16,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -72,6 +87,9 @@
           "min_required_depth": 16,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -84,6 +102,9 @@
         "condition": {
           "type": "yungsapi:depth",
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -99,6 +120,9 @@
           "min_required_depth": 16,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -113,6 +137,9 @@
           "min_required_depth": 16,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -125,6 +152,9 @@
         "condition": {
           "type": "yungsapi:depth",
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -140,6 +170,9 @@
           "min_required_depth": 16,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -154,6 +187,9 @@
           "min_required_depth": 16,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -167,6 +203,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 16,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -193,6 +232,9 @@
             }
           ]
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -210,6 +252,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -225,6 +270,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -242,6 +290,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -257,6 +308,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -274,6 +328,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -289,6 +346,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -307,6 +367,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -322,6 +385,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -339,6 +405,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -354,6 +423,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -371,6 +443,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -386,6 +461,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -403,6 +481,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -418,6 +499,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -435,6 +519,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -450,6 +537,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -467,6 +557,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -483,6 +576,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -497,8 +593,11 @@
 //        "max_count": 1,
 //        "condition": {
 //          "type": "yungsapi:depth",
-//          "min_required_depth": 20
-//          "max_possible_depth": 28,
+//          "min_required_depth": 20,
+//          "max_possible_depth": 28
+//        },
+//        "enhanced_terrain_adaptation": {
+//          "type": "yungsapi:none"
 //        },
 //        "element_type": "yungsapi:yung_single_element"
 //      }
@@ -516,6 +615,9 @@
           "min_required_depth": 20,
           "max_possible_depth": 28
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -531,6 +633,9 @@
           "type": "yungsapi:depth",
           "min_required_depth": 20,
           "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -558,6 +663,9 @@
               "top_cutoff_y": 30
             }
           ]
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
         },
         "element_type": "yungsapi:yung_single_element"
       }

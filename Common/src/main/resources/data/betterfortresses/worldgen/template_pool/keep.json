@@ -22,13 +22,6 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "ignore_bounds": false,
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -39,13 +32,6 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "ignore_bounds": false,
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     }

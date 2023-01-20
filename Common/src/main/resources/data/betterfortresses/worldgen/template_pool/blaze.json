@@ -11,13 +11,6 @@
         "name": "blaze_forced",
         "max_count": 2,
         "is_priority": true,
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 25
@@ -33,13 +26,6 @@
         "projection": "rigid",
         "name": "blaze",
         "max_count": 2,
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
@@ -55,13 +41,6 @@
         "projection": "rigid",
         "name": "blaze_broken",
         "max_count": 2,
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
@@ -81,13 +60,6 @@
           "type": "yungsapi:depth",
           "min_required_depth": 28
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -102,13 +74,6 @@
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
-        },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -125,13 +90,6 @@
           "type": "yungsapi:depth",
           "min_required_depth": 28
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -146,13 +104,6 @@
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
-        },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -169,13 +120,6 @@
           "type": "yungsapi:depth",
           "min_required_depth": 28
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -190,13 +134,6 @@
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
-        },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
         },
         "element_type": "yungsapi:yung_single_element"
       }
@@ -213,9 +150,6 @@
           "type": "yungsapi:depth",
           "min_required_depth": 28
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:carved_top_no_beard_large"
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -231,9 +165,6 @@
           "type": "yungsapi:depth",
           "min_required_depth": 28
         },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:carved_top_no_beard_large"
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -248,9 +179,6 @@
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 28
-        },
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:carved_top_no_beard_large"
         },
         "element_type": "yungsapi:yung_single_element"
       }

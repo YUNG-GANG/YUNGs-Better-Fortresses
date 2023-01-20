@@ -8,13 +8,6 @@
         "location": "betterfortresses:keep/tower/keep_tower_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "enhanced_terrain_adaptation": {
-          "type": "yungsapi:custom",
-          "carves": true,
-          "beards": false,
-          "kernel_size": 24,
-          "kernel_distance": 24
-        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -27,6 +20,9 @@
         "name": "tower_stairs",
         "is_priority": true,
         "max_count": 1,
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -36,6 +32,9 @@
         "location": "betterfortresses:keep/tower/tower_stairs_mid_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -50,6 +49,9 @@
           "type": "yungsapi:altitude",
           "bottom_cutoff_y": 30
         },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -59,6 +61,9 @@
         "location": "betterfortresses:keep/tower/tower_stairs_bottom_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -68,6 +73,9 @@
         "location": "betterfortresses:keep/tower/tower_bottom_back_left",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
         "element_type": "yungsapi:yung_single_element"
       }
     }
