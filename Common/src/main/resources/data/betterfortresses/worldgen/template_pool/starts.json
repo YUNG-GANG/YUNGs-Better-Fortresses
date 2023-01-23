@@ -10,6 +10,29 @@
         "projection": "rigid",
         "element_type": "yungsapi:yung_single_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:mod_integration/keep_create",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:mod_loaded",
+              "modid": "create"
+            },
+            {
+              "type": "yungsapi:rotation",
+              "rotations": [ "none" ]
+            }
+          ]
+        },
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
     }
   ]
 }
