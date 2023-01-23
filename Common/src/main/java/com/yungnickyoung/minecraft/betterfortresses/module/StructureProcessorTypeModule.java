@@ -6,6 +6,7 @@ import com.yungnickyoung.minecraft.betterfortresses.world.processor.BridgeArchPr
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.LiquidBlockProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.NetherWartProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.PillarProcessor;
+import com.yungnickyoung.minecraft.betterfortresses.world.processor.RedSandstoneStairsProcessor;
 import com.yungnickyoung.minecraft.betterfortresses.world.processor.StairPillarProcessor;
 import com.yungnickyoung.minecraft.yungsapi.api.autoregister.AutoRegister;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
@@ -18,6 +19,9 @@ public class StructureProcessorTypeModule {
 
     @AutoRegister("stair_pillar_processor")
     public static StructureProcessorType<StairPillarProcessor> STAIR_PILLAR_PROCESSOR = () -> StairPillarProcessor.CODEC;
+
+    @AutoRegister("red_sandstone_stairs_processor")
+    public static StructureProcessorType<RedSandstoneStairsProcessor> RED_SANDSTONE_STAIRS_PROCESSOR = () -> RedSandstoneStairsProcessor.CODEC;
 
     @AutoRegister("bridge_arch_processor")
     public static StructureProcessorType<BridgeArchProcessor> BRIDGE_ARCH_PROCESSOR = () -> BridgeArchProcessor.CODEC;
