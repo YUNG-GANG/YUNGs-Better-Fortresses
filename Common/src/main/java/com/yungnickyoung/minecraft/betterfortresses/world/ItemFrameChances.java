@@ -51,6 +51,11 @@ public class ItemFrameChances {
                 .addItem(Items.PORKCHOP, .3f)
                 .addItem(Items.COOKED_PORKCHOP, .3f)
                 .addItem(Items.GOLD_INGOT, .2f);
+
+        alchemyItems = new ItemRandomizer(Items.AIR)
+                .addItem(Items.QUARTZ, .3f)
+                .addItem(Items.MAGMA_CREAM, .3f)
+                .addItem(Items.FIRE_CHARGE, .2f);
     }
 
     /**
@@ -61,6 +66,7 @@ public class ItemFrameChances {
     private ItemRandomizer lootItems;
     private ItemRandomizer studyItems;
     private ItemRandomizer messHallItems;
+    private ItemRandomizer alchemyItems;
 
     public Item getWeaponItem(RandomSource randomSource) {
         return weaponItems.get(randomSource);
@@ -76,5 +82,9 @@ public class ItemFrameChances {
 
     public Item getMessHallItem(RandomSource randomSource) {
         return messHallItems.get(randomSource);
+    }
+
+    public Item getAlchemyItem(RandomSource randomSource) {
+        return alchemyItems.get(randomSource);
     }
 }

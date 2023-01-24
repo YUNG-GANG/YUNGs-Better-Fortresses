@@ -316,13 +316,13 @@
       }
     },
     {
-      "weight": 8,
+      "weight": 4,
       "element": {
         "location": "betterfortresses:halls/room/study_sm",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "name": "study",
-        "max_count": 2,
+        "name": "study_sm",
+        "max_count": 1,
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 20,
@@ -398,8 +398,8 @@
         "location": "betterfortresses:halls/room/study_md_l_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "name": "study",
-        "max_count": 2,
+        "name": "study_md",
+        "max_count": 1,
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 20,
@@ -417,8 +417,8 @@
         "location": "betterfortresses:halls/room/study_md_r_0",
         "processors": "betterfortresses:main",
         "projection": "rigid",
-        "name": "study",
-        "max_count": 2,
+        "name": "study_md",
+        "max_count": 1,
         "condition": {
           "type": "yungsapi:depth",
           "min_required_depth": 20,
@@ -583,25 +583,45 @@
       }
     },
     // Medium rooms (side)
-//    {
-//      "weight": 1,
-//      "element": {
-//        "location": "betterfortresses:halls/room/puzzle_md_side_0",
-//        "processors": "betterfortresses:main",
-//        "projection": "rigid",
-//        "name": "puzzle_md_side_0",
-//        "max_count": 1,
-//        "condition": {
-//          "type": "yungsapi:depth",
-//          "min_required_depth": 20,
-//          "max_possible_depth": 28
-//        },
-//        "enhanced_terrain_adaptation": {
-//          "type": "yungsapi:none"
-//        },
-//        "element_type": "yungsapi:yung_single_element"
-//      }
-//    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/puzzle_md_side_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "puzzle_md_side_0",
+        "max_count": 1,
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 20,
+          "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:halls/room/alchemy_md_side_0",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "alchemy_md_side_0",
+        "max_count": 1,
+        "condition": {
+          "type": "yungsapi:depth",
+          "min_required_depth": 20,
+          "max_possible_depth": 28
+        },
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
+        "is_priority": true,
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
     {
       "weight": 1,
       "element": {

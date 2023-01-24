@@ -93,6 +93,18 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                     return null;
                 }
                 newNBT.getCompound("Item").putString("id", randomItemString);
+            } else if (item.equals("\"minecraft:nether_wart\"")) { // Alchemy ingredients pool
+                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getAlchemyItem(random)).toString();
+                if (randomItemString.equals("minecraft:air")) {
+                    return null;
+                }
+                newNBT.getCompound("Item").putString("id", randomItemString);
+            } else if (item.equals("\"minecraft:glowstone_dust\"")) { // In alchemy room. 50% chance of blaze powder
+                if (random.nextBoolean()) {
+                    newNBT.getCompound("Item").putString("id", "minecraft:blaze_powder");
+                } else {
+                    return null;
+                }
             }
 
             // Required to suppress dumb log spam
