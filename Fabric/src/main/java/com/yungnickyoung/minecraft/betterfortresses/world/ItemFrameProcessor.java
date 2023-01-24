@@ -113,7 +113,7 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
             newNBT.putInt("TileZ", globalEntityInfo.blockPos.getZ());
 
             // Randomize rotation
-            int minRotation = item.equals("minecraft:chiseled_nether_bricks") ? 1 : 0; // Special case for puzzle room
+            int minRotation = item.equals("\"minecraft:chiseled_nether_bricks\"") ? 1 : 0; // Special case for puzzle room
             int randomRotation = Mth.randomBetweenInclusive(random, minRotation, 7);
             newNBT.putByte("ItemRotation", (byte) randomRotation);
 
