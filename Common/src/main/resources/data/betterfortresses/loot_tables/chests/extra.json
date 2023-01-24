@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 50,
+          "weight": 25,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -43,7 +43,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 50,
+          "weight": 25,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -120,6 +120,22 @@
             }
           ],
           "name": "minecraft:glowstone_dust"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3.0,
+                "max": 6.0
+              },
+              "add": false
+            }
+          ],
+          "name": "minecraft:quartz"
         }
       ]
     }

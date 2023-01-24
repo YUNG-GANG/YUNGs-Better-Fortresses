@@ -88,20 +88,10 @@
             }
           ],
           "name": "minecraft:nether_wart"
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "type": "minecraft:uniform",
-        "min": 1.0,
-        "max": 3.0
-      },
-      "bonus_rolls": 0.0,
-      "entries": [
+        },
         {
           "type": "minecraft:item",
-          "weight": 50,
+          "weight": 25,
           "name": "minecraft:diamond"
         }
       ]
