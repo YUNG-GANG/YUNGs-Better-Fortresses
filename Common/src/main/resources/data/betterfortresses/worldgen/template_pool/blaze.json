@@ -9,11 +9,11 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "name": "blaze_forced",
-        "max_count": 2,
+        "max_count": 1,
         "is_priority": true,
         "condition": {
           "type": "yungsapi:depth",
-          "min_required_depth": 25
+          "min_required_depth": 28
         },
         "element_type": "yungsapi:yung_single_element"
       }

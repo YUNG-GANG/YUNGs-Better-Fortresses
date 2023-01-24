@@ -383,6 +383,32 @@
       }
     },
     {
+      "weight": 5,
+      "element": {
+        "location": "betterfortresses:bridge/blaze_stairs",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "name": "blaze_stairs_forced",
+        "max_count": 1,
+        "condition": {
+          "type": "yungsapi:all_of",
+          "conditions": [
+            {
+              "type": "yungsapi:depth",
+              "min_required_depth": 27
+            },
+            {
+              "type": "yungsapi:altitude",
+              "bottom_cutoff_y": 31
+            }
+          ]
+        },
+        "is_priority": true,
+        "deadend_pool": "betterfortresses:bridge_terminators",
+        "element_type": "yungsapi:yung_single_element"
+      }
+    },
+    {
       "weight": 10,
       "element": {
         "location": "betterfortresses:bridge/bridge_junction_2",
