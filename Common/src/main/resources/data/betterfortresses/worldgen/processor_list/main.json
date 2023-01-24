@@ -40,6 +40,16 @@
               "type": "yungsapi:altitude",
               "top_cutoff_y": 31
             }
+          },
+          {
+            "blockState": {
+              "Name": "minecraft:cracked_nether_bricks"
+            },
+            "probability": 0.4,
+            "condition": {
+              "type": "yungsapi:altitude",
+              "top_cutoff_y": 33
+            }
           }
         ]
       }
@@ -65,6 +75,16 @@
             "condition": {
               "type": "yungsapi:altitude",
               "top_cutoff_y": 31
+            }
+          },
+          {
+            "blockState": {
+              "Name": "minecraft:cracked_nether_bricks"
+            },
+            "probability": 0.4,
+            "condition": {
+              "type": "yungsapi:altitude",
+              "top_cutoff_y": 33
             }
           }
         ]
