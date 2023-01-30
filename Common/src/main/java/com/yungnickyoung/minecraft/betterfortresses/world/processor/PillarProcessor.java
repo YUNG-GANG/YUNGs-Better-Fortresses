@@ -26,19 +26,19 @@ public class PillarProcessor extends StructureProcessor {
     public static final Codec<PillarProcessor> CODEC = RecordCodecBuilder.create(instance -> instance
             .group(
                     BlockState.CODEC.fieldOf("target_block").forGetter(config -> config.targetBlock),
-                    BlockState.CODEC.fieldOf("target_block_output").forGetter(config -> config.targetBlockOutput),
+                    BlockStateRandomizer.CODEC.fieldOf("target_block_output").forGetter(config -> config.targetBlockOutput),
                     BlockStateRandomizer.CODEC.fieldOf("pillar_states").forGetter(config -> config.pillarStates),
                     Direction.CODEC.optionalFieldOf("direction", Direction.DOWN).forGetter(processor -> processor.direction),
                     Codec.INT.optionalFieldOf("pillar_length", -1).forGetter(config -> config.length))
             .apply(instance, instance.stable(PillarProcessor::new)));
 
     public final BlockState targetBlock;
-    public final BlockState targetBlockOutput;
+    public final BlockStateRandomizer targetBlockOutput;
     public final BlockStateRandomizer pillarStates;
     public final Direction direction;
     public final int length;
 
-    private PillarProcessor(BlockState targetBlock, BlockState targetBlockOutput, BlockStateRandomizer pillarStates, Direction direction, int length) {
+    private PillarProcessor(BlockState targetBlock, BlockStateRandomizer targetBlockOutput, BlockStateRandomizer pillarStates, Direction direction, int length) {
         this.targetBlock = targetBlock;
         this.targetBlockOutput = targetBlockOutput;
         this.pillarStates = pillarStates;
@@ -57,11 +57,10 @@ public class PillarProcessor extends StructureProcessor {
             if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(blockInfoGlobal.pos))) {
                 return blockInfoGlobal;
             }
-
-            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos, targetBlockOutput, blockInfoGlobal.nbt);
+            RandomSource random = structurePlacementData.getRandom(blockInfoGlobal.pos);
+            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos, targetBlockOutput.get(random), blockInfoGlobal.nbt);
             BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos.mutable().move(Direction.DOWN);
             BlockState currBlockState = levelReader.getBlockState(mutable);
-            RandomSource random = structurePlacementData.getRandom(blockInfoGlobal.pos);
 
             while (mutable.getY() > levelReader.getMinBuildHeight()
                     && mutable.getY() < levelReader.getMaxBuildHeight()

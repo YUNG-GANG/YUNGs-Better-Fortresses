@@ -24,7 +24,11 @@
         "Name": "minecraft:orange_terracotta"
       },
       "target_block_output": {
-        "Name": "minecraft:red_nether_bricks"
+        "defaultBlockState": {
+          "Name": "minecraft:red_nether_bricks"
+        },
+        "entries": [
+        ]
       },
       "pillar_states": {
         "defaultBlockState": {
@@ -60,7 +64,11 @@
         "Name": "minecraft:yellow_terracotta"
       },
       "target_block_output": {
-        "Name": "minecraft:nether_bricks"
+        "defaultBlockState": {
+          "Name": "minecraft:nether_bricks"
+        },
+        "entries": [
+        ]
       },
       "pillar_states": {
         "defaultBlockState": {
@@ -86,6 +94,70 @@
               "type": "yungsapi:altitude",
               "top_cutoff_y": 33
             }
+          }
+        ]
+      }
+    },
+    {
+      "processor_type": "betterfortresses:pillar_processor",
+      "target_block": {
+        "Name": "minecraft:orange_wool"
+      },
+      "target_block_output": {
+        "defaultBlockState": {
+          "Name": "minecraft:nether_bricks"
+        },
+        "entries": [
+          {
+            "blockState": {
+              "Name": "minecraft:magma_block"
+            },
+            "probability": 0.75
+          }
+        ]
+      },
+      "pillar_states": {
+        "defaultBlockState": {
+          "Name": "minecraft:nether_bricks"
+        },
+        "entries": [
+          {
+            "blockState": {
+              "Name": "minecraft:cracked_nether_bricks"
+            },
+            "probability": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "processor_type": "betterfortresses:pillar_processor",
+      "target_block": {
+        "Name": "minecraft:orange_concrete"
+      },
+      "target_block_output": {
+        "defaultBlockState": {
+          "Name": "minecraft:nether_bricks"
+        },
+        "entries": [
+          {
+            "blockState": {
+              "Name": "minecraft:magma_block"
+            },
+            "probability": 0.75
+          }
+        ]
+      },
+      "pillar_states": {
+        "defaultBlockState": {
+          "Name": "minecraft:nether_bricks"
+        },
+        "entries": [
+          {
+            "blockState": {
+              "Name": "minecraft:cracked_nether_bricks"
+            },
+            "probability": 0.4
           }
         ]
       }
