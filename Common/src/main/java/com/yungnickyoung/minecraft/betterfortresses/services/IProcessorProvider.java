@@ -5,5 +5,4 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 
 public interface IProcessorProvider {
     Codec<StructureProcessor> itemFrameProcessorCodec();
-    Codec<StructureProcessor> piglinProcessorCodec();
 }

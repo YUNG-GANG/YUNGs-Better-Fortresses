@@ -34,7 +34,4 @@ public class StructureProcessorTypeModule {
 
     @AutoRegister("item_frame_processor")
     public static StructureProcessorType<StructureProcessor> ITEM_FRAME_PROCESSOR = Services.PROCESSORS::itemFrameProcessorCodec;
-
-    @AutoRegister("piglin_processor")
-    public static StructureProcessorType<StructureProcessor> PIGLIN_PROCESSOR = Services.PROCESSORS::itemFrameProcessorCodec;
 }

@@ -7,9 +7,6 @@
       "processor_type": "betterfortresses:item_frame_processor"
     },
     {
-      "processor_type": "betterfortresses:piglin_processor"
-    },
-    {
       "processor_type": "betterfortresses:bridge_arch_processor"
     },
     {
