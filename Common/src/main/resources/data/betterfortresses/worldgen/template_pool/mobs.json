@@ -25,6 +25,18 @@
         },
         "element_type": "yungsapi:yung_single_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betterfortresses:mobs/skeleton",
+        "processors": "betterfortresses:main",
+        "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "type": "yungsapi:none"
+        },
+        "element_type": "yungsapi:yung_single_element"
+      }
     }
   ]
 }

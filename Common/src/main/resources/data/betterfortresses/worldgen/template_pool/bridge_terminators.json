@@ -14,9 +14,7 @@
           "conditions": [
             {
               "type": "yungsapi:piece_in_horizontal_direction",
-              "pieces": [
-                "all"
-              ],
+              "pieces": ["yungsapi:all"],
               "range": 5,
               "rotation": "none"
             },
@@ -40,7 +38,9 @@
                   "betterfortresses:bridge/bridge_pillar_ruined_1",
                   "betterfortresses:bridge/bridge_pillar_ruined_2",
                   "betterfortresses:bridge/bridge_pillar_ruined_3",
-                  "betterfortresses:bridge/bridge_pillar_ruined_4"
+                  "betterfortresses:bridge/bridge_pillar_ruined_4",
+                  "betterfortresses:bridge/bridge_pillar_beacon_unlit",
+                  "betterfortresses:bridge/bridge_pillar_shelter"
                 ],
                 "range": 5,
                 "rotation": "none"
@@ -153,9 +153,7 @@
           "conditions": [
             {
               "type": "yungsapi:piece_in_horizontal_direction",
-              "pieces": [
-                "all"
-              ],
+              "pieces": ["yungsapi:all"],
               "range": 5,
               "rotation": "none"
             },
@@ -179,7 +177,9 @@
                   "betterfortresses:bridge/bridge_pillar_ruined_1",
                   "betterfortresses:bridge/bridge_pillar_ruined_2",
                   "betterfortresses:bridge/bridge_pillar_ruined_3",
-                  "betterfortresses:bridge/bridge_pillar_ruined_4"
+                  "betterfortresses:bridge/bridge_pillar_ruined_4",
+                  "betterfortresses:bridge/bridge_pillar_beacon_unlit",
+                  "betterfortresses:bridge/bridge_pillar_shelter"
                 ],
                 "range": 5,
                 "rotation": "none"
@@ -211,9 +211,7 @@
           "conditions": [
             {
               "type": "yungsapi:piece_in_horizontal_direction",
-              "pieces": [
-                "all"
-              ],
+              "pieces": ["yungsapi:all"],
               "range": 5,
               "rotation": "none"
             },
@@ -237,7 +235,9 @@
                   "betterfortresses:bridge/bridge_pillar_ruined_1",
                   "betterfortresses:bridge/bridge_pillar_ruined_2",
                   "betterfortresses:bridge/bridge_pillar_ruined_3",
-                  "betterfortresses:bridge/bridge_pillar_ruined_4"
+                  "betterfortresses:bridge/bridge_pillar_ruined_4",
+                  "betterfortresses:bridge/bridge_pillar_beacon_unlit",
+                  "betterfortresses:bridge/bridge_pillar_shelter"
                 ],
                 "range": 5,
                 "rotation": "none"
@@ -316,17 +316,19 @@
           {
             "condition": {
               "type": "yungsapi:piece_in_horizontal_direction",
-              "pieces": ["all"],
+              "pieces": ["yungsapi:all"],
               "range": 5,
               "rotation": "none"
             },
             "target_selector": {
               "type": "yungsapi:self"
             },
-            "action": {
-              "type": "yungsapi:transform",
-              "output": ["betterfortresses:bridge/bridge_pillar_wall"]
-            }
+            "actions": [
+              {
+                "type": "yungsapi:transform",
+                "output": ["betterfortresses:bridge/bridge_pillar_wall"]
+              }
+            ]
           }
         ],
         "element_type": "yungsapi:yung_single_element"
@@ -355,17 +357,19 @@
           {
             "condition": {
               "type": "yungsapi:piece_in_horizontal_direction",
-              "pieces": ["all"],
+              "pieces": ["yungsapi:all"],
               "range": 5,
               "rotation": "none"
             },
             "target_selector": {
               "type": "yungsapi:self"
             },
-            "action": {
-              "type": "yungsapi:transform",
-              "output": ["betterfortresses:bridge/bridge_pillar_wall"]
-            }
+            "actions": [
+              {
+                "type": "yungsapi:transform",
+                "output": ["betterfortresses:bridge/bridge_pillar_wall"]
+              }
+            ]
           }
         ],
         "element_type": "yungsapi:yung_single_element"
