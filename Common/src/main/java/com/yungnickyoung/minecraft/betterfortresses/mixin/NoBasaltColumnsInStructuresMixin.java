@@ -6,6 +6,7 @@ import com.yungnickyoung.minecraft.betterfortresses.util.MixinUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.SectionPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.WorldGenRegion;
 import net.minecraft.world.level.LevelAccessor;
@@ -40,7 +41,7 @@ public class NoBasaltColumnsInStructuresMixin {
             return;
         }
 
-        Registry<Structure> configuredStructureFeatureRegistry = levelAccessor.registryAccess().registryOrThrow(Registry.STRUCTURE_REGISTRY);
+        Registry<Structure> configuredStructureFeatureRegistry = levelAccessor.registryAccess().registryOrThrow(Registries.STRUCTURE);
         StructureManager structureManager = ((WorldGenRegionAccessor) levelAccessor).getStructureManager();
         Structure fortressStructure = configuredStructureFeatureRegistry.get(new ResourceLocation(BetterFortressesCommon.MOD_ID, "fortress"));
         if (fortressStructure == null) {

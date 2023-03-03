@@ -5,7 +5,6 @@ import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.util.Mth;
@@ -15,6 +14,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlac
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -50,19 +50,19 @@ public class ItemFrameProcessor extends StructureProcessor {
             // Set the item in the item frame's NBT
             CompoundTag newNBT = globalEntityInfo.nbt.copy();
             if (item.equals("\"minecraft:stone_sword\"")) { // Weapon pool
-                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getWeaponItem(random)).toString();
+                String randomItemString = ForgeRegistries.ITEMS.getKey(ItemFrameChances.get().getWeaponItem(random)).toString();
                 if (randomItemString.equals("minecraft:air")) {
                     return null;
                 }
                 newNBT.getCompound("Item").putString("id", randomItemString);
             } else if (item.equals("\"minecraft:iron_ingot\"")) { // Loot pool
-                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getLootItem(random)).toString();
+                String randomItemString = ForgeRegistries.ITEMS.getKey(ItemFrameChances.get().getLootItem(random)).toString();
                 if (randomItemString.equals("minecraft:air")) {
                     return null;
                 }
                 newNBT.getCompound("Item").putString("id", randomItemString);
             } else if (item.equals("\"minecraft:cobweb\"")) { // Study pool
-                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getStudyItem(random)).toString();
+                String randomItemString = ForgeRegistries.ITEMS.getKey(ItemFrameChances.get().getStudyItem(random)).toString();
                 if (randomItemString.equals("minecraft:air")) {
                     return null;
                 }
@@ -89,13 +89,13 @@ public class ItemFrameProcessor extends StructureProcessor {
                 }
                 newNBT.getCompound("Item").putString("id", randomItemString);
             } else if (item.equals("\"minecraft:apple\"")) { // Mess Hall pool
-                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getMessHallItem(random)).toString();
+                String randomItemString = ForgeRegistries.ITEMS.getKey(ItemFrameChances.get().getMessHallItem(random)).toString();
                 if (randomItemString.equals("minecraft:air")) {
                     return null;
                 }
                 newNBT.getCompound("Item").putString("id", randomItemString);
             } else if (item.equals("\"minecraft:nether_wart\"")) { // Alchemy ingredients pool
-                String randomItemString = Registry.ITEM.getKey(ItemFrameChances.get().getAlchemyItem(random)).toString();
+                String randomItemString = ForgeRegistries.ITEMS.getKey(ItemFrameChances.get().getAlchemyItem(random)).toString();
                 if (randomItemString.equals("minecraft:air")) {
                     return null;
                 }

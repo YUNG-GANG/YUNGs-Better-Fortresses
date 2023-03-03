@@ -20,22 +20,24 @@ import java.nio.file.Paths;
 
 public class ConfigModuleForge {
     public static final String CUSTOM_CONFIG_PATH = BetterFortressesCommon.MOD_ID;
-    public static final String VERSION_PATH = "forge-1_19";
+    public static final String VERSION_PATH = "forge-1_19_3";
 
     public static void init() {
         initCustomFiles();
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BNFConfigForge.SPEC, "betterfortresses-forge-1_19.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BNFConfigForge.SPEC, "betterfortresses-forge-1_19_3.toml");
         MinecraftForge.EVENT_BUS.addListener(ConfigModuleForge::onWorldLoad);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(ConfigModuleForge::onConfigChange);
     }
 
     private static void onWorldLoad(LevelEvent.Load event) {
         bakeConfig();
+        loadItemFramesJSON();
     }
 
     private static void onConfigChange(ModConfigEvent event) {
         if (event.getConfig().getSpec() == BNFConfigForge.SPEC) {
             bakeConfig();
+            loadItemFramesJSON();
         }
     }
 
