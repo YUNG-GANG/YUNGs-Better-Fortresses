@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.12-SNAPSHOT'
+    id 'fabric-loom' version '0.10-SNAPSHOT'
     id 'idea'
 }
 
@@ -27,6 +27,7 @@ dependencies {
     implementation("org.reflections:reflections:0.10.2")
     include("org.reflections:reflections:0.10.2")
 
+    // Fabric
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
@@ -48,13 +49,13 @@ loom {
             client()
             setConfigName("Fabric Client")
             ideConfigGenerated(true)
-            runDir("run")
+            runDir("Fabric/run")
         }
         server {
             server()
             setConfigName("Fabric Server")
             ideConfigGenerated(true)
-            runDir("run")
+            runDir("Fabric/run")
         }
     }
 }

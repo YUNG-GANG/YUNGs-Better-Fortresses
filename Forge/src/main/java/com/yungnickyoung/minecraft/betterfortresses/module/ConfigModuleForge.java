@@ -5,7 +5,7 @@ import com.yungnickyoung.minecraft.betterfortresses.config.BNFConfigForge;
 import com.yungnickyoung.minecraft.betterfortresses.world.ItemFrameChances;
 import com.yungnickyoung.minecraft.yungsapi.io.JSON;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.level.LevelEvent;
+import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
@@ -20,22 +20,24 @@ import java.nio.file.Paths;
 
 public class ConfigModuleForge {
     public static final String CUSTOM_CONFIG_PATH = BetterFortressesCommon.MOD_ID;
-    public static final String VERSION_PATH = "forge-1_19";
+    public static final String VERSION_PATH = "forge-1_18_2";
 
     public static void init() {
         initCustomFiles();
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BNFConfigForge.SPEC, "betterfortresses-forge-1_19.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BNFConfigForge.SPEC, "betterfortresses-forge-1_18_2.toml");
         MinecraftForge.EVENT_BUS.addListener(ConfigModuleForge::onWorldLoad);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(ConfigModuleForge::onConfigChange);
     }
 
-    private static void onWorldLoad(LevelEvent.Load event) {
+    private static void onWorldLoad(WorldEvent.Load event) {
         bakeConfig();
+        loadItemFramesJSON();
     }
 
     private static void onConfigChange(ModConfigEvent event) {
         if (event.getConfig().getSpec() == BNFConfigForge.SPEC) {
             bakeConfig();
+            loadItemFramesJSON();
         }
     }
 
@@ -156,5 +158,7 @@ public class ConfigModuleForge {
 
     private static void bakeConfig() {
         BetterFortressesCommon.CONFIG.general.disableVanillaFortresses = BNFConfigForge.general.disableVanillaFortresses.get();
+        BetterFortressesCommon.CONFIG.general.startMinY = BNFConfigForge.general.startMinY.get();
+        BetterFortressesCommon.CONFIG.general.startMaxY = BNFConfigForge.general.startMaxY.get();
     }
 }

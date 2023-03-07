@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "betterfortresses.refmap.json",
   "mixins": [
+    "DisableVanillaFortressesMixinFabric"
   ],
   "injectors": {
     "defaultRequire": 1

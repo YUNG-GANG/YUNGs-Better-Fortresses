@@ -2,17 +2,17 @@ package com.yungnickyoung.minecraft.betterfortresses.mixin;
 
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.mixin.accessor.WorldGenRegionAccessor;
-import com.yungnickyoung.minecraft.betterfortresses.util.MixinUtil;
+import com.yungnickyoung.minecraft.betterfortresses.module.TagModule;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.SectionPos;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.WorldGenRegion;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.StructureManager;
+import net.minecraft.world.level.StructureFeatureManager;
 import net.minecraft.world.level.chunk.ChunkStatus;
 import net.minecraft.world.level.levelgen.feature.BasaltColumnsFeature;
-import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -40,15 +40,13 @@ public class NoBasaltColumnsInStructuresMixin {
             return;
         }
 
-        Registry<Structure> configuredStructureFeatureRegistry = levelAccessor.registryAccess().registryOrThrow(Registry.STRUCTURE_REGISTRY);
-        StructureManager structureManager = ((WorldGenRegionAccessor) levelAccessor).getStructureManager();
-        Structure fortressStructure = configuredStructureFeatureRegistry.get(new ResourceLocation(BetterFortressesCommon.MOD_ID, "fortress"));
-        if (fortressStructure == null) {
-            return;
-        }
-
-        if (MixinUtil.getStructureAt(structureManager, mutableBlockPos, fortressStructure).isValid()) {
-            cir.setReturnValue(false);
+        Registry<ConfiguredStructureFeature<?, ?>> configuredStructureFeatureRegistry = levelAccessor.registryAccess().registryOrThrow(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY);
+        StructureFeatureManager structureManager = ((WorldGenRegionAccessor) levelAccessor).getStructureFeatureManager();
+        for (Holder<ConfiguredStructureFeature<?, ?>> configuredStructureFeature : configuredStructureFeatureRegistry.getOrCreateTag(TagModule.BETTER_NETHER_FORTRESS)) {
+            if (structureManager.getStructureAt(mutableBlockPos, configuredStructureFeature.value()).isValid()) {
+                cir.setReturnValue(false);
+                return;
+            }
         }
     }
 }

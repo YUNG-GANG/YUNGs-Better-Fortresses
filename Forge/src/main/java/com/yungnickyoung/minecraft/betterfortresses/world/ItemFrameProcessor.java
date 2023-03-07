@@ -9,7 +9,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.util.Mth;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
@@ -18,6 +17,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Random;
 
 /**
  * Fills item frames with a random item.
@@ -36,7 +36,7 @@ public class ItemFrameProcessor extends StructureProcessor {
                                                                StructurePlaceSettings structurePlaceSettings,
                                                                StructureTemplate template) {
         if (globalEntityInfo.nbt.getString("id").equals("minecraft:item_frame")) {
-            RandomSource random = structurePlaceSettings.getRandom(globalEntityInfo.blockPos);
+            Random random = structurePlaceSettings.getRandom(globalEntityInfo.blockPos);
 
             // Determine which pool we are grabbing from
             String item;

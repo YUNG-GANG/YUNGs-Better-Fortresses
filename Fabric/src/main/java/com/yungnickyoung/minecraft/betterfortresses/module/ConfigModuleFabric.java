@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 
 public class ConfigModuleFabric {
     public static final String CUSTOM_CONFIG_PATH = BetterFortressesCommon.MOD_ID;
-    public static final String VERSION_PATH = "fabric-1_19";
+    public static final String VERSION_PATH = "fabric-1_18_2";
 
     public static void init() {
         initCustomFiles();
@@ -150,5 +150,7 @@ public class ConfigModuleFabric {
 
     private static void bakeConfig(BNFConfigFabric configFabric) {
         BetterFortressesCommon.CONFIG.general.disableVanillaFortresses = configFabric.general.disableVanillaFortresses;
+        BetterFortressesCommon.CONFIG.general.startMinY = configFabric.general.startMinY;
+        BetterFortressesCommon.CONFIG.general.startMaxY = configFabric.general.startMaxY;
     }
 }

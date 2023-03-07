@@ -1,9 +1,10 @@
 package com.yungnickyoung.minecraft.betterfortresses.world;
 
 import com.yungnickyoung.minecraft.yungsapi.world.ItemRandomizer;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+
+import java.util.Random;
 
 /**
  * Singleton class holding ItemRandomizers for items in item frames.
@@ -68,23 +69,23 @@ public class ItemFrameChances {
     private ItemRandomizer messHallItems;
     private ItemRandomizer alchemyItems;
 
-    public Item getWeaponItem(RandomSource randomSource) {
-        return weaponItems.get(randomSource);
+    public Item getWeaponItem(Random random) {
+        return weaponItems.get(random);
     }
 
-    public Item getLootItem(RandomSource randomSource) {
-        return lootItems.get(randomSource);
+    public Item getLootItem(Random random) {
+        return lootItems.get(random);
     }
 
-    public Item getStudyItem(RandomSource randomSource) {
-        return studyItems.get(randomSource);
+    public Item getStudyItem(Random random) {
+        return studyItems.get(random);
     }
 
-    public Item getMessHallItem(RandomSource randomSource) {
-        return messHallItems.get(randomSource);
+    public Item getMessHallItem(Random random) {
+        return messHallItems.get(random);
     }
 
-    public Item getAlchemyItem(RandomSource randomSource) {
-        return alchemyItems.get(randomSource);
+    public Item getAlchemyItem(Random random) {
+        return alchemyItems.get(random);
     }
 }

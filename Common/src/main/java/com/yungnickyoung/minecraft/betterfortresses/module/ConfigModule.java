@@ -5,5 +5,7 @@ public class ConfigModule {
 
     public static class General {
         public boolean disableVanillaFortresses = true;
+        public int startMinY = 62;
+        public int startMaxY = 82;
     }
 }
