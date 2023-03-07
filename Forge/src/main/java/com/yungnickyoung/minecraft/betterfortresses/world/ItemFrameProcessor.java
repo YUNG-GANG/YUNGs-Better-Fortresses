@@ -10,6 +10,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
@@ -29,12 +30,12 @@ public class ItemFrameProcessor extends StructureProcessor {
     public static final Codec<StructureProcessor> CODEC = Codec.unit(() -> INSTANCE);
 
     @Override
-    public StructureTemplate.StructureEntityInfo processEntity(LevelReader levelReader,
+    public StructureTemplate.StructureEntityInfo processEntity(ServerLevelAccessor serverLevelAccessor,
                                                                BlockPos structurePiecePos,
+                                                               BlockPos structurePieceBottomCenterPos,
                                                                StructureTemplate.StructureEntityInfo localEntityInfo,
                                                                StructureTemplate.StructureEntityInfo globalEntityInfo,
-                                                               StructurePlaceSettings structurePlaceSettings,
-                                                               StructureTemplate template) {
+                                                               StructurePlaceSettings structurePlaceSettings) {
         if (globalEntityInfo.nbt.getString("id").equals("minecraft:item_frame")) {
             Random random = structurePlaceSettings.getRandom(globalEntityInfo.blockPos);
 
@@ -76,7 +77,15 @@ public class ItemFrameProcessor extends StructureProcessor {
                     else if (f < 0.6f) enchantment = "minecraft:flame";
                     else if (f < 0.8f) enchantment = "minecraft:smite";
                     else enchantment = "minecraft:binding_curse";
-                    int lvl = random.nextFloat() < 0.75f ? 1 : 2;
+                    int lvl;
+
+                    // Flame and Binding Curse can only be level 1
+                    if (enchantment.equals("minecraft:flame") || enchantment.equals("minecraft:binding_curse")) {
+                        lvl = 1;
+                    } else {
+                        lvl = random.nextFloat() < 0.75f ? 1 : 2;
+                    }
+
                     CompoundTag tag = new CompoundTag();
                     ListTag storedEnchantments = Util.make(new ListTag(), listTag -> listTag.add(
                             Util.make(new CompoundTag(), compoundTag -> {
