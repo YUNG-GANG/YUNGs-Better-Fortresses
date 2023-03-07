@@ -6,7 +6,14 @@
     "structure_set_avoid_radius_check": 10,
     "structure_set_avoid": [
       "minecraft:nether_complexes"
-    ]
+    ],
+    "enhanced_terrain_adaptation": {
+      "type": "yungsapi:custom",
+      "carves": true,
+      "beards": false,
+      "kernel_size": 24,
+      "kernel_distance": 24
+    }
   },
   "biomes": "#betterfortresses:has_structure/better_fortress",
   "adapt_noise": false,

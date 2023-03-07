@@ -10,7 +10,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
@@ -30,12 +29,12 @@ public class ItemFrameProcessor extends StructureProcessor {
     public static final Codec<StructureProcessor> CODEC = Codec.unit(() -> INSTANCE);
 
     @Override
-    public StructureTemplate.StructureEntityInfo processEntity(ServerLevelAccessor serverLevelAccessor,
+    public StructureTemplate.StructureEntityInfo processEntity(LevelReader levelReader,
                                                                BlockPos structurePiecePos,
-                                                               BlockPos structurePieceBottomCenterPos,
                                                                StructureTemplate.StructureEntityInfo localEntityInfo,
                                                                StructureTemplate.StructureEntityInfo globalEntityInfo,
-                                                               StructurePlaceSettings structurePlaceSettings) {
+                                                               StructurePlaceSettings structurePlaceSettings,
+                                                               StructureTemplate structureTemplate) {
         if (globalEntityInfo.nbt.getString("id").equals("minecraft:item_frame")) {
             Random random = structurePlaceSettings.getRandom(globalEntityInfo.blockPos);
 
