@@ -3,6 +3,7 @@ package com.yungnickyoung.minecraft.betterfortresses.mixin;
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.mixin.accessor.WorldGenRegionAccessor;
 import com.yungnickyoung.minecraft.betterfortresses.module.TagModule;
+import com.yungnickyoung.minecraft.betterfortresses.util.MixinUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -35,15 +36,15 @@ public class NoBasaltColumnsInStructuresMixin {
         }
 
         SectionPos sectionPos = SectionPos.of(mutableBlockPos);
-        if (levelAccessor.getChunk(sectionPos.x(), sectionPos.z(), ChunkStatus.STRUCTURE_REFERENCES, false) == null) {
-            BetterFortressesCommon.LOGGER.warn("Better Fortresses: Detected a mod with a broken basalt columns configuredfeature that is trying to place blocks outside the 3x3 safe chunk area for features. Find the broken mod and report to them to fix the placement of their basalt columns feature.");
+        if (!levelAccessor.getChunk(sectionPos.x(), sectionPos.z()).getStatus().isOrAfter(ChunkStatus.STRUCTURE_REFERENCES)) {
+            BetterFortressesCommon.LOGGER.warn("Detected a mod with a broken basalt columns configuredfeature that is trying to place blocks outside the 3x3 safe chunk area for features. Find the broken mod and report to them to fix the placement of their basalt columns feature.");
             return;
         }
 
         Registry<ConfiguredStructureFeature<?, ?>> configuredStructureFeatureRegistry = levelAccessor.registryAccess().registryOrThrow(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY);
         StructureFeatureManager structureManager = ((WorldGenRegionAccessor) levelAccessor).getStructureFeatureManager();
         for (Holder<ConfiguredStructureFeature<?, ?>> configuredStructureFeature : configuredStructureFeatureRegistry.getOrCreateTag(TagModule.BETTER_NETHER_FORTRESS)) {
-            if (structureManager.getStructureAt(mutableBlockPos, configuredStructureFeature.value()).isValid()) {
+            if (MixinUtil.getStructureAt(structureManager, mutableBlockPos, configuredStructureFeature.value()).isValid()) {
                 cir.setReturnValue(false);
                 return;
             }

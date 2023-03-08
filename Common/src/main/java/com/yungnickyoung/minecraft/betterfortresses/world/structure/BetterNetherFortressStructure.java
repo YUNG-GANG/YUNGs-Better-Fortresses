@@ -45,7 +45,7 @@ public class BetterNetherFortressStructure extends StructureFeature<YungJigsawCo
                     startPos,
                     false,
                     false,
-                    116);
+                    112);
         });
     }
 
