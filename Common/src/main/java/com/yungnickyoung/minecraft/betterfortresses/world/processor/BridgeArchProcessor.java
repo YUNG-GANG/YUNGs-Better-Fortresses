@@ -34,22 +34,22 @@ public class BridgeArchProcessor extends StructureProcessor {
                                                              StructureTemplate.StructureBlockInfo blockInfoLocal,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
-        if (blockInfoGlobal.state.is(Blocks.PRISMARINE_STAIRS) || blockInfoGlobal.state.is(Blocks.PRISMARINE_BRICK_STAIRS)) {
-            Direction facing = structurePlacementData.getRotation().rotate(blockInfoGlobal.state.getValue(StairBlock.FACING));
-            boolean isJunction = blockInfoGlobal.state.is(Blocks.PRISMARINE_STAIRS);
+        if (blockInfoGlobal.state().is(Blocks.PRISMARINE_STAIRS) || blockInfoGlobal.state().is(Blocks.PRISMARINE_BRICK_STAIRS)) {
+            Direction facing = structurePlacementData.getRotation().rotate(blockInfoGlobal.state().getValue(StairBlock.FACING));
+            boolean isJunction = blockInfoGlobal.state().is(Blocks.PRISMARINE_STAIRS);
 
             // Modify the block itself
-            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos, Blocks.NETHER_BRICKS.defaultBlockState(), null);
+            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos(), Blocks.NETHER_BRICKS.defaultBlockState(), null);
 
             if (!(levelReader instanceof WorldGenRegion worldGenRegion)) {
                 return blockInfoGlobal;
             }
 
-            if (levelReader.getChunk(blockInfoGlobal.pos.above(3)).getBlockState(blockInfoGlobal.pos.above(3)).isAir()) {
+            if (levelReader.getChunk(blockInfoGlobal.pos().above(3)).getBlockState(blockInfoGlobal.pos().above(3)).isAir()) {
                 return blockInfoGlobal;
             }
 
-            BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos.mutable();
+            BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos().mutable();
 
             // Generate first pillar
             mutable.move(Direction.UP);

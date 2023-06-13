@@ -33,14 +33,14 @@ public class StairPillarProcessor extends StructureProcessor {
                                                              StructureTemplate.StructureBlockInfo blockInfoLocal,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
-        if (blockInfoGlobal.state.is(Blocks.STONE_BRICK_STAIRS) || blockInfoGlobal.state.is(Blocks.PURPUR_STAIRS)) {
-            Direction facing = blockInfoGlobal.state.getValue(StairBlock.FACING);
-            Half half = blockInfoGlobal.state.getValue(StairBlock.HALF);
-            StairsShape shape = blockInfoGlobal.state.getValue(StairBlock.SHAPE);
+        if (blockInfoGlobal.state().is(Blocks.STONE_BRICK_STAIRS) || blockInfoGlobal.state().is(Blocks.PURPUR_STAIRS)) {
+            Direction facing = blockInfoGlobal.state().getValue(StairBlock.FACING);
+            Half half = blockInfoGlobal.state().getValue(StairBlock.HALF);
+            StairsShape shape = blockInfoGlobal.state().getValue(StairBlock.SHAPE);
 
             // Modify the block itself
             BlockState output;
-            if (blockInfoGlobal.state.is(Blocks.PURPUR_STAIRS)) {
+            if (blockInfoGlobal.state().is(Blocks.PURPUR_STAIRS)) {
                 output = Blocks.RED_NETHER_BRICKS.defaultBlockState();
             } else {
                 output = Blocks.RED_NETHER_BRICK_STAIRS.defaultBlockState()
@@ -49,10 +49,10 @@ public class StairPillarProcessor extends StructureProcessor {
                         .setValue(StairBlock.SHAPE, shape);
             }
 
-            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos, output, blockInfoGlobal.nbt);
+            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos(), output, blockInfoGlobal.nbt());
 
             // Begin generating offset pillar
-            BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos.mutable().move(facing);
+            BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos().mutable().move(facing);
             if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(mutable))) {
                 return blockInfoGlobal;
             }

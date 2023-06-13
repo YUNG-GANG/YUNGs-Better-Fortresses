@@ -33,10 +33,10 @@ public class RedSandstoneStairsProcessor extends StructureProcessor {
                                                              StructureTemplate.StructureBlockInfo blockInfoLocal,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
-        if (blockInfoGlobal.state.is(Blocks.RED_SANDSTONE_STAIRS)) {
-            Direction facing = blockInfoGlobal.state.getValue(StairBlock.FACING);
-            Half half = blockInfoGlobal.state.getValue(StairBlock.HALF);
-            StairsShape shape = blockInfoGlobal.state.getValue(StairBlock.SHAPE);
+        if (blockInfoGlobal.state().is(Blocks.RED_SANDSTONE_STAIRS)) {
+            Direction facing = blockInfoGlobal.state().getValue(StairBlock.FACING);
+            Half half = blockInfoGlobal.state().getValue(StairBlock.HALF);
+            StairsShape shape = blockInfoGlobal.state().getValue(StairBlock.SHAPE);
 
             // Modify the block itself
             BlockState output;
@@ -45,13 +45,13 @@ public class RedSandstoneStairsProcessor extends StructureProcessor {
                     .setValue(StairBlock.HALF, half)
                     .setValue(StairBlock.SHAPE, shape);
 
-            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos, output, blockInfoGlobal.nbt);
+            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos(), output, blockInfoGlobal.nbt());
 
-            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(blockInfoGlobal.pos))) {
+            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(blockInfoGlobal.pos()))) {
                 return blockInfoGlobal;
             }
 
-            BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos.mutable().move(Direction.DOWN);
+            BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos().mutable().move(Direction.DOWN);
 
             // Generate pillar
             BlockState currBlockState = levelReader.getBlockState(mutable);

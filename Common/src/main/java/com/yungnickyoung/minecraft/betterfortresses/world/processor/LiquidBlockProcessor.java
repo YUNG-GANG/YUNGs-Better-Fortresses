@@ -41,13 +41,13 @@ public class LiquidBlockProcessor extends StructureProcessor {
                                                              StructureTemplate.StructureBlockInfo blockInfoLocal,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
-        if (blockInfoGlobal.state.is(this.targetBlock.getBlock())) {
-            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(blockInfoGlobal.pos))) {
+        if (blockInfoGlobal.state().is(this.targetBlock.getBlock())) {
+            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(blockInfoGlobal.pos()))) {
                 return blockInfoGlobal;
             }
-            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos, targetBlockOutput, blockInfoGlobal.nbt);
+            blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos(), targetBlockOutput, blockInfoGlobal.nbt());
             if (levelReader instanceof WorldGenRegion worldGenRegion) {
-                worldGenRegion.scheduleTick(blockInfoGlobal.pos, Fluids.LAVA, 0);
+                worldGenRegion.scheduleTick(blockInfoGlobal.pos(), Fluids.LAVA, 0);
             }
         }
         return blockInfoGlobal;
