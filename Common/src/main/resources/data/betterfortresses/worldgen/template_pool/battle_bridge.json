@@ -44,14 +44,6 @@
             {
               "type": "yungsapi:mod_loaded",
               "modid": "create"
-            },
-            {
-              "type": "yungsapi:rotation",
-              "rotations": [ "none" ]
-            },
-            {
-              "type": "yungsapi:mod_loader",
-              "loaders": [ "forge" ]
             }
           ]
         },
