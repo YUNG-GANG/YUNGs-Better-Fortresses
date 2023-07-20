@@ -18,21 +18,8 @@
         "processors": "betterfortresses:main",
         "projection": "rigid",
         "condition": {
-          "type": "yungsapi:all_of",
-          "conditions": [
-            {
-              "type": "yungsapi:mod_loaded",
-              "modid": "create"
-            },
-            {
-              "type": "yungsapi:rotation",
-              "rotations": [ "none" ]
-            },
-            {
-              "type": "yungsapi:mod_loader",
-              "loaders": [ "forge" ]
-            }
-          ]
+          "type": "yungsapi:mod_loaded",
+          "modid": "create"
         },
         "is_priority": true,
         "element_type": "yungsapi:yung_single_element"
