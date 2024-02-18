@@ -17,19 +17,35 @@
   },
   "criteria": {
     "in_fortress": {
-      "trigger": "yungsapi:structure_location",
+      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:fortress"
-        }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:fortress"
+              }
+            }
+          }
+        ]
       }
     },
     "in_better_fortress": {
-      "trigger": "yungsapi:structure_location",
+      "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "betterfortresses:fortress"
-        }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "betterfortresses:fortress"
+              }
+            }
+          }
+        ]
       }
     }
   },
