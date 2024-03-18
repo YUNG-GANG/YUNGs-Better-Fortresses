@@ -37,7 +37,6 @@ public class NoBasaltColumnsInStructuresMixin {
 
         SectionPos sectionPos = SectionPos.of(mutableBlockPos);
         if (levelAccessor.getChunk(sectionPos.x(), sectionPos.z(), ChunkStatus.STRUCTURE_REFERENCES, false) == null) {
-            BetterFortressesCommon.LOGGER.warn("Better Fortresses: Detected a mod with a broken basalt columns configuredfeature that is trying to place blocks outside the 3x3 safe chunk area for features. Find the broken mod and report to them to fix the placement of their basalt columns feature.");
             return;
         }
 
