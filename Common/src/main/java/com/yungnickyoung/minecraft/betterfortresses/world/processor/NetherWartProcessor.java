@@ -1,6 +1,6 @@
 package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -18,7 +18,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 public class NetherWartProcessor extends StructureProcessor {
     public static final NetherWartProcessor INSTANCE = new NetherWartProcessor();
-    public static final Codec<NetherWartProcessor> CODEC = Codec.unit(() -> INSTANCE);
+    public static final MapCodec<NetherWartProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
 
     @Override
     public StructureTemplate.StructureBlockInfo processBlock(LevelReader levelReader,

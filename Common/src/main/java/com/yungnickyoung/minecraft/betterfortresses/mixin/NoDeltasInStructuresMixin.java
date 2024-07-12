@@ -1,15 +1,13 @@
 package com.yungnickyoung.minecraft.betterfortresses.mixin;
 
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
-import com.yungnickyoung.minecraft.betterfortresses.mixin.accessor.WorldGenRegionAccessor;
-import com.yungnickyoung.minecraft.betterfortresses.util.MixinUtil;
 import net.minecraft.core.Registry;
 import net.minecraft.core.SectionPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.WorldGenRegion;
 import net.minecraft.world.level.StructureManager;
-import net.minecraft.world.level.chunk.ChunkStatus;
+import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.level.levelgen.feature.DeltaFeature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration;
@@ -42,13 +40,13 @@ public class NoDeltasInStructuresMixin {
         }
 
         Registry<Structure> configuredStructureFeatureRegistry = context.level().registryAccess().registryOrThrow(Registries.STRUCTURE);
-        StructureManager structureManager = ((WorldGenRegionAccessor) context.level()).getStructureManager();
-        Structure fortressStructure = configuredStructureFeatureRegistry.get(new ResourceLocation(BetterFortressesCommon.MOD_ID, "fortress"));
+        StructureManager structureManager = context.level().getLevel().structureManager();
+        Structure fortressStructure = configuredStructureFeatureRegistry.get(ResourceLocation.fromNamespaceAndPath(BetterFortressesCommon.MOD_ID, "fortress"));
         if (fortressStructure == null) {
             return;
         }
 
-        if (MixinUtil.getStructureAt(structureManager, context.origin(), fortressStructure).isValid()) {
+        if (structureManager.getStructureAt(context.origin(), fortressStructure).isValid()) {
             cir.setReturnValue(false);
         }
     }

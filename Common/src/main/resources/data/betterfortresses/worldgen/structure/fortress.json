@@ -7,10 +7,10 @@
   "size": 46,
   "enhanced_terrain_adaptation": {
     "type": "yungsapi:custom",
-    "carves": true,
-    "beards": false,
     "kernel_size": 24,
-    "kernel_distance": 24
+    "kernel_distance": 24,
+    "top": "carve",
+    "bottom": "none"
   },
   "start_height": {
     "type": "minecraft:uniform",

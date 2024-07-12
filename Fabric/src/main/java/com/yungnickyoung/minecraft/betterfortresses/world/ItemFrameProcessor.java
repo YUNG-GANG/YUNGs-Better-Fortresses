@@ -1,6 +1,6 @@
 package com.yungnickyoung.minecraft.betterfortresses.world;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import com.yungnickyoung.minecraft.yungsapi.world.processor.StructureEntityProcessor;
@@ -8,7 +8,6 @@ import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
@@ -28,7 +27,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 public class ItemFrameProcessor extends StructureEntityProcessor {
     public static final ItemFrameProcessor INSTANCE = new ItemFrameProcessor();
-    public static final Codec<StructureProcessor> CODEC = Codec.unit(() -> INSTANCE);
+    public static final MapCodec<StructureProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
 
     @Override
     public StructureTemplate.StructureEntityInfo processEntity(ServerLevelAccessor serverLevelAccessor,
@@ -92,15 +91,13 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                             lvl = random.nextFloat() < 0.75f ? 1 : 2;
                         }
 
-                        CompoundTag tag = new CompoundTag();
-                        ListTag storedEnchantments = Util.make(new ListTag(), listTag -> listTag.add(
-                                Util.make(new CompoundTag(), compoundTag -> {
-                                    compoundTag.putShort("lvl", (short) lvl);
-                                    compoundTag.putString("id", enchantment);
-                                })
-                        ));
-                        tag.put("StoredEnchantments", storedEnchantments);
-                        newNBT.getCompound("Item").put("tag", tag);
+                        CompoundTag componentsTag = newNBT.getCompound("Item").getCompound("components");
+                        componentsTag.put("minecraft:stored_enchantments", Util.make(new CompoundTag(), enchantmentsTag -> {
+                            enchantmentsTag.put("levels", Util.make(new CompoundTag(), levelsTag -> {
+                                levelsTag.putInt(enchantment, lvl);
+                            }));
+                        }));
+                        newNBT.getCompound("Item").put("components", componentsTag);
                     }
                     newNBT.getCompound("Item").putString("id", randomItemString);
                     break;

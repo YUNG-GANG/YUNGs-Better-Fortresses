@@ -1,8 +1,6 @@
 package com.yungnickyoung.minecraft.betterfortresses.mixin;
 
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
-import com.yungnickyoung.minecraft.betterfortresses.mixin.accessor.WorldGenRegionAccessor;
-import com.yungnickyoung.minecraft.betterfortresses.util.MixinUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.SectionPos;
@@ -11,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.WorldGenRegion;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.StructureManager;
-import net.minecraft.world.level.chunk.ChunkStatus;
+import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.level.levelgen.feature.BasaltColumnsFeature;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import org.spongepowered.asm.mixin.Mixin;
@@ -41,13 +39,13 @@ public class NoBasaltColumnsInStructuresMixin {
         }
 
         Registry<Structure> configuredStructureFeatureRegistry = levelAccessor.registryAccess().registryOrThrow(Registries.STRUCTURE);
-        StructureManager structureManager = ((WorldGenRegionAccessor) levelAccessor).getStructureManager();
-        Structure fortressStructure = configuredStructureFeatureRegistry.get(new ResourceLocation(BetterFortressesCommon.MOD_ID, "fortress"));
+        StructureManager structureManager = ((WorldGenRegion) levelAccessor).getLevel().structureManager();
+        Structure fortressStructure = configuredStructureFeatureRegistry.get(ResourceLocation.fromNamespaceAndPath(BetterFortressesCommon.MOD_ID, "fortress"));
         if (fortressStructure == null) {
             return;
         }
 
-        if (MixinUtil.getStructureAt(structureManager, mutableBlockPos, fortressStructure).isValid()) {
+        if (structureManager.getStructureAt(mutableBlockPos, fortressStructure).isValid()) {
             cir.setReturnValue(false);
         }
     }

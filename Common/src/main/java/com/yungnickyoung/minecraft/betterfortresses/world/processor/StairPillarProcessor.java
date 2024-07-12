@@ -1,6 +1,6 @@
 package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -24,7 +24,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 public class StairPillarProcessor extends StructureProcessor {
     public static final StairPillarProcessor INSTANCE = new StairPillarProcessor();
-    public static final Codec<StairPillarProcessor> CODEC = Codec.unit(() -> INSTANCE);
+    public static final MapCodec<StairPillarProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
 
     @Override
     public StructureTemplate.StructureBlockInfo processBlock(LevelReader levelReader,

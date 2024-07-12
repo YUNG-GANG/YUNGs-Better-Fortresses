@@ -1,6 +1,6 @@
 package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -20,7 +20,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 public class LiquidBlockProcessor extends StructureProcessor {
-    public static final Codec<LiquidBlockProcessor> CODEC = RecordCodecBuilder.create(instance -> instance
+    public static final MapCodec<LiquidBlockProcessor> CODEC = RecordCodecBuilder.mapCodec(instance -> instance
             .group(
                     BlockState.CODEC.fieldOf("target_block").forGetter(config -> config.targetBlock),
                     BlockState.CODEC.fieldOf("target_block_output").forGetter(config -> config.targetBlockOutput))

@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.commands.LocateCommand;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -22,6 +23,7 @@ import java.util.Optional;
  */
 @Mixin(LocateCommand.class)
 public class LocateVanillaFortressCommandMixin {
+    @Unique
     private static final SimpleCommandExceptionType OLD_FORTRESS_EXCEPTION =
             new SimpleCommandExceptionType(Component.translatable("Use /locate structure betterfortresses:fortress instead!"));
 
@@ -30,7 +32,7 @@ public class LocateVanillaFortressCommandMixin {
                                                                        ResourceOrTagKeyArgument.Result<Structure> result,
                                                                        CallbackInfoReturnable<Integer> ci) throws CommandSyntaxException {
         Optional<ResourceKey<Structure>> optional = result.unwrap().left();
-        if (BetterFortressesCommon.CONFIG.general.disableVanillaFortresses && optional.isPresent() && optional.get().location().equals(new ResourceLocation("fortress"))) {
+        if (BetterFortressesCommon.CONFIG.general.disableVanillaFortresses && optional.isPresent() && optional.get().location().equals(ResourceLocation.withDefaultNamespace("fortress"))) {
             throw OLD_FORTRESS_EXCEPTION.create();
         }
     }
