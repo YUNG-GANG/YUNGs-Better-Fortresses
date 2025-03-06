@@ -7,6 +7,7 @@ import com.yungnickyoung.minecraft.yungsapi.io.JSON;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.InteractionResult;
 
@@ -26,11 +27,14 @@ public class ConfigModuleFabric {
         AutoConfig.getConfigHolder(BNFConfigFabric.class).registerSaveListener(ConfigModuleFabric::bakeConfig);
         AutoConfig.getConfigHolder(BNFConfigFabric.class).registerLoadListener(ConfigModuleFabric::bakeConfig);
         bakeConfig(AutoConfig.getConfigHolder(BNFConfigFabric.class).get());
+
+        // Reload JSON files when server starts to ensure modded blocks and items load properly
+        ServerLifecycleEvents.SERVER_STARTED.register(server -> ConfigModuleFabric.reloadJSON());
     }
 
     private static InteractionResult bakeConfig(ConfigHolder<BNFConfigFabric> configHolder, BNFConfigFabric configFabric) {
         bakeConfig(configFabric);
-        loadItemFramesJSON();
+        reloadJSON();
         return InteractionResult.SUCCESS;
     }
 
@@ -38,6 +42,10 @@ public class ConfigModuleFabric {
         createDirectory();
         createBaseReadMe();
         createJsonReadMe();
+        reloadJSON();
+    }
+
+    private static void reloadJSON() {
         loadItemFramesJSON();
     }
 
