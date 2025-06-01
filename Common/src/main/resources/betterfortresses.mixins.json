@@ -5,6 +5,7 @@
   "refmap": "betterfortresses.refmap.json",
   "mixins": [
     "DisableVanillaFortressesMixin",
+    "FixMobSpawningMixin",
     "LocateVanillaFortressCommandMixin"
   ],
   "injectors": {
