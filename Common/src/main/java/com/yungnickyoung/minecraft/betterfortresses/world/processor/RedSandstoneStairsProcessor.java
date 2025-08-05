@@ -58,7 +58,7 @@ public class RedSandstoneStairsProcessor extends StructureProcessor {
             while (mutable.getY() > levelReader.getMinY()
                     && mutable.getY() < levelReader.getMaxY()
                     && (currBlockState.isAir() || !levelReader.getFluidState(mutable).isEmpty())) {
-                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.NETHER_BRICKS.defaultBlockState(), false);
+                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.NETHER_BRICKS.defaultBlockState(), 0);
 
                 // Update to next position
                 mutable.move(Direction.DOWN);
