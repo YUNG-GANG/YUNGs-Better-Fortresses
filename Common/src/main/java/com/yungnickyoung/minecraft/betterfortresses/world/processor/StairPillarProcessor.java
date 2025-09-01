@@ -63,7 +63,7 @@ public class StairPillarProcessor extends StructureProcessor {
                             .setValue(StairBlock.FACING, facing.getOpposite())
                             .setValue(StairBlock.HALF, half)
                             .setValue(StairBlock.SHAPE, shape),
-                    false);
+                    0);
 
             // Generate rest of pillar
             mutable.move(Direction.DOWN);
@@ -71,7 +71,7 @@ public class StairPillarProcessor extends StructureProcessor {
             while (mutable.getY() > levelReader.getMinY()
                     && mutable.getY() < levelReader.getMaxY()
                     && (currBlockState.isAir() || !levelReader.getFluidState(mutable).isEmpty())) {
-                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.RED_NETHER_BRICKS.defaultBlockState(), false);
+                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.RED_NETHER_BRICKS.defaultBlockState(), 0);
 
                 // Update to next position
                 mutable.move(Direction.DOWN);

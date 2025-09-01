@@ -62,11 +62,11 @@ public class ItemFrameChances {
      * Instance variables and methods
      **/
 
-    private ItemRandomizer weaponItems;
-    private ItemRandomizer lootItems;
-    private ItemRandomizer studyItems;
-    private ItemRandomizer messHallItems;
-    private ItemRandomizer alchemyItems;
+    private final ItemRandomizer weaponItems;
+    private final ItemRandomizer lootItems;
+    private final ItemRandomizer studyItems;
+    private final ItemRandomizer messHallItems;
+    private final ItemRandomizer alchemyItems;
 
     public Item getWeaponItem(RandomSource randomSource) {
         return weaponItems.get(randomSource);
