@@ -2,7 +2,7 @@ package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 
 import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
-import net.minecraft.MethodsReturnNonnullByDefault;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.WorldGenRegion;
@@ -18,10 +18,10 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
+
+
+
 public class StairPillarProcessor extends StructureProcessor {
     public static final StairPillarProcessor INSTANCE = new StairPillarProcessor();
     public static final MapCodec<StairPillarProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
@@ -53,7 +53,7 @@ public class StairPillarProcessor extends StructureProcessor {
 
             // Begin generating offset pillar
             BlockPos.MutableBlockPos mutable = blockInfoGlobal.pos().mutable().move(facing);
-            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(mutable))) {
+            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(ChunkPos.containing(mutable))) {
                 return blockInfoGlobal;
             }
 
@@ -62,8 +62,7 @@ public class StairPillarProcessor extends StructureProcessor {
                     Blocks.RED_NETHER_BRICK_STAIRS.defaultBlockState()
                             .setValue(StairBlock.FACING, facing.getOpposite())
                             .setValue(StairBlock.HALF, half)
-                            .setValue(StairBlock.SHAPE, shape),
-                    false);
+                            .setValue(StairBlock.SHAPE, shape));
 
             // Generate rest of pillar
             mutable.move(Direction.DOWN);
@@ -71,7 +70,7 @@ public class StairPillarProcessor extends StructureProcessor {
             while (mutable.getY() > levelReader.getMinY()
                     && mutable.getY() < levelReader.getMaxY()
                     && (currBlockState.isAir() || !levelReader.getFluidState(mutable).isEmpty())) {
-                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.RED_NETHER_BRICKS.defaultBlockState(), false);
+                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.RED_NETHER_BRICKS.defaultBlockState());
 
                 // Update to next position
                 mutable.move(Direction.DOWN);

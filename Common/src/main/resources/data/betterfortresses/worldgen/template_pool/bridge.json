@@ -54,7 +54,6 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
-    // Pillar w/ chance of unlit beacon
     {
       "weight": 20,
       "element": {
@@ -160,7 +159,6 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
-    // Pillar w/ chance of lit beacon
     {
       "weight": 10,
       "element": {
@@ -266,7 +264,6 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
-    // Pillar w/ chance of shelter
     {
       "weight": 15,
       "element": {

@@ -3,7 +3,7 @@ package com.yungnickyoung.minecraft.betterfortresses.world;
 import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -16,13 +16,13 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+
 
 /**
  * Fills item frames with a random item.
  * The type of random item depends on the item already in the frame.
  */
-@ParametersAreNonnullByDefault
+
 public class ItemFrameProcessor extends StructureProcessor {
     public static final ItemFrameProcessor INSTANCE = new ItemFrameProcessor();
     public static final MapCodec<StructureProcessor> CODEC = MapCodec.unit(() -> INSTANCE);

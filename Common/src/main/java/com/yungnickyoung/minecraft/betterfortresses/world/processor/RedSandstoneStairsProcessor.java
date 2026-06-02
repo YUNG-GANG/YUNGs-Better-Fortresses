@@ -2,7 +2,7 @@ package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 
 import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
-import net.minecraft.MethodsReturnNonnullByDefault;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.WorldGenRegion;
@@ -18,10 +18,10 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
+
+
+
 public class RedSandstoneStairsProcessor extends StructureProcessor {
     public static final RedSandstoneStairsProcessor INSTANCE = new RedSandstoneStairsProcessor();
     public static final MapCodec<RedSandstoneStairsProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
@@ -47,7 +47,7 @@ public class RedSandstoneStairsProcessor extends StructureProcessor {
 
             blockInfoGlobal = new StructureTemplate.StructureBlockInfo(blockInfoGlobal.pos(), output, blockInfoGlobal.nbt());
 
-            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(new ChunkPos(blockInfoGlobal.pos()))) {
+            if (levelReader instanceof WorldGenRegion worldGenRegion && !worldGenRegion.getCenter().equals(ChunkPos.containing(blockInfoGlobal.pos()))) {
                 return blockInfoGlobal;
             }
 
@@ -58,7 +58,7 @@ public class RedSandstoneStairsProcessor extends StructureProcessor {
             while (mutable.getY() > levelReader.getMinY()
                     && mutable.getY() < levelReader.getMaxY()
                     && (currBlockState.isAir() || !levelReader.getFluidState(mutable).isEmpty())) {
-                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.NETHER_BRICKS.defaultBlockState(), false);
+                levelReader.getChunk(mutable).setBlockState(mutable, Blocks.NETHER_BRICKS.defaultBlockState());
 
                 // Update to next position
                 mutable.move(Direction.DOWN);

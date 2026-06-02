@@ -4,7 +4,7 @@ import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.BetterFortressesCommon;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 import com.yungnickyoung.minecraft.yungsapi.world.processor.StructureEntityProcessor;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -18,13 +18,13 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+
 
 /**
  * Fills item frames with a random item.
  * The type of random item depends on the item already in the frame.
  */
-@ParametersAreNonnullByDefault
+
 public class ItemFrameProcessor extends StructureEntityProcessor {
     public static final ItemFrameProcessor INSTANCE = new ItemFrameProcessor();
     public static final MapCodec<StructureProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
@@ -42,7 +42,7 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
             // Determine which pool we are grabbing from
             String item;
             try {
-                item = globalEntityInfo.nbt.getCompound("Item").get("id").toString();
+                item = globalEntityInfo.nbt.getCompoundOrEmpty("Item").get("id").toString();
             } catch (Exception e) {
                 BetterFortressesCommon.LOGGER.info("Unable to randomize item frame at {}", globalEntityInfo.blockPos);
                 return globalEntityInfo;
@@ -50,13 +50,16 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
 
             // Set the item in the item frame's NBT
             CompoundTag newNBT = globalEntityInfo.nbt.copy();
+            if (!newNBT.contains("Item")) {
+                newNBT.put("Item", new CompoundTag());
+            }
             switch (item) {
                 case "\"minecraft:stone_sword\"": { // Weapon pool
                     String randomItemString = BuiltInRegistries.ITEM.getKey(ItemFrameChances.get().getWeaponItem(random)).toString();
                     if (randomItemString.equals("minecraft:air")) {
                         return null;
                     }
-                    newNBT.getCompound("Item").putString("id", randomItemString);
+                    newNBT.getCompoundOrEmpty("Item").putString("id", randomItemString);
                     break;
                 }
                 case "\"minecraft:iron_ingot\"": { // Loot pool
@@ -64,7 +67,7 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                     if (randomItemString.equals("minecraft:air")) {
                         return null;
                     }
-                    newNBT.getCompound("Item").putString("id", randomItemString);
+                    newNBT.getCompoundOrEmpty("Item").putString("id", randomItemString);
                     break;
                 }
                 case "\"minecraft:cobweb\"": { // Study pool
@@ -91,15 +94,15 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                             lvl = random.nextFloat() < 0.75f ? 1 : 2;
                         }
 
-                        CompoundTag componentsTag = newNBT.getCompound("Item").getCompound("components");
+                        CompoundTag componentsTag = newNBT.getCompoundOrEmpty("Item").getCompoundOrEmpty("components");
                         componentsTag.put("minecraft:stored_enchantments", Util.make(new CompoundTag(), enchantmentsTag -> {
                             enchantmentsTag.put("levels", Util.make(new CompoundTag(), levelsTag -> {
                                 levelsTag.putInt(enchantment, lvl);
                             }));
                         }));
-                        newNBT.getCompound("Item").put("components", componentsTag);
+                        newNBT.getCompoundOrEmpty("Item").put("components", componentsTag);
                     }
-                    newNBT.getCompound("Item").putString("id", randomItemString);
+                    newNBT.getCompoundOrEmpty("Item").putString("id", randomItemString);
                     break;
                 }
                 case "\"minecraft:apple\"": { // Mess Hall pool
@@ -107,7 +110,7 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                     if (randomItemString.equals("minecraft:air")) {
                         return null;
                     }
-                    newNBT.getCompound("Item").putString("id", randomItemString);
+                    newNBT.getCompoundOrEmpty("Item").putString("id", randomItemString);
                     break;
                 }
                 case "\"minecraft:nether_wart\"": { // Alchemy ingredients pool
@@ -115,12 +118,12 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                     if (randomItemString.equals("minecraft:air")) {
                         return null;
                     }
-                    newNBT.getCompound("Item").putString("id", randomItemString);
+                    newNBT.getCompoundOrEmpty("Item").putString("id", randomItemString);
                     break;
                 }
                 case "\"minecraft:glowstone_dust\"":  // In alchemy room. 50% chance of blaze powder
                     if (random.nextBoolean()) {
-                        newNBT.getCompound("Item").putString("id", "minecraft:blaze_powder");
+                        newNBT.getCompoundOrEmpty("Item").putString("id", "minecraft:blaze_powder");
                     } else {
                         return null;
                     }

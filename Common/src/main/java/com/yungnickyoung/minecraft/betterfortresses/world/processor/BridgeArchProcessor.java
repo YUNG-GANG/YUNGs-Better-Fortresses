@@ -2,7 +2,7 @@ package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 
 import com.mojang.serialization.MapCodec;
 import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
-import net.minecraft.MethodsReturnNonnullByDefault;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.WorldGenRegion;
@@ -19,10 +19,10 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
+
+
+
 public class BridgeArchProcessor extends StructureProcessor {
     public static final BridgeArchProcessor INSTANCE = new BridgeArchProcessor();
     public static final MapCodec<BridgeArchProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
@@ -56,10 +56,10 @@ public class BridgeArchProcessor extends StructureProcessor {
             placeBlock(worldGenRegion, levelReader, mutable, Blocks.NETHER_BRICKS.defaultBlockState());
             mutable.move(Direction.UP);
             placeWallBlock(worldGenRegion, levelReader, mutable, Blocks.NETHER_BRICK_WALL.defaultBlockState()
-                    .setValue(WallBlock.EAST_WALL, facing == Direction.EAST || (isJunction && facing == Direction.NORTH) ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.SOUTH_WALL, facing == Direction.SOUTH || (isJunction && facing == Direction.EAST) ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.WEST_WALL, facing == Direction.WEST || (isJunction && facing == Direction.SOUTH) ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.NORTH_WALL, facing == Direction.NORTH || (isJunction && facing == Direction.WEST) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.EAST, facing == Direction.EAST || (isJunction && facing == Direction.NORTH) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.SOUTH, facing == Direction.SOUTH || (isJunction && facing == Direction.EAST) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.WEST, facing == Direction.WEST || (isJunction && facing == Direction.SOUTH) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.NORTH, facing == Direction.NORTH || (isJunction && facing == Direction.WEST) ? WallSide.LOW : WallSide.NONE)
             );
 
             // Second pillar
@@ -69,10 +69,10 @@ public class BridgeArchProcessor extends StructureProcessor {
                     .setValue(StairBlock.FACING, facing.getOpposite()));
             mutable.move(Direction.UP);
             placeWallBlock(worldGenRegion, levelReader, mutable, Blocks.NETHER_BRICK_WALL.defaultBlockState()
-                            .setValue(WallBlock.EAST_WALL, facing == Direction.EAST ? WallSide.LOW : WallSide.NONE)
-                            .setValue(WallBlock.SOUTH_WALL, facing == Direction.SOUTH ? WallSide.LOW : WallSide.NONE)
-                            .setValue(WallBlock.WEST_WALL, facing == Direction.WEST ? WallSide.LOW : WallSide.NONE)
-                            .setValue(WallBlock.NORTH_WALL, facing == Direction.NORTH ? WallSide.LOW : WallSide.NONE)
+                            .setValue(WallBlock.EAST, facing == Direction.EAST ? WallSide.LOW : WallSide.NONE)
+                            .setValue(WallBlock.SOUTH, facing == Direction.SOUTH ? WallSide.LOW : WallSide.NONE)
+                            .setValue(WallBlock.WEST, facing == Direction.WEST ? WallSide.LOW : WallSide.NONE)
+                            .setValue(WallBlock.NORTH, facing == Direction.NORTH ? WallSide.LOW : WallSide.NONE)
             );
 
             // Middle
@@ -85,10 +85,10 @@ public class BridgeArchProcessor extends StructureProcessor {
             mutable.move(facing);
             mutable.move(Direction.DOWN);
             placeWallBlock(worldGenRegion, levelReader, mutable, Blocks.NETHER_BRICK_WALL.defaultBlockState()
-                    .setValue(WallBlock.EAST_WALL, facing == Direction.WEST ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.SOUTH_WALL, facing == Direction.NORTH ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.WEST_WALL, facing == Direction.EAST ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.NORTH_WALL, facing == Direction.SOUTH ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.EAST, facing == Direction.WEST ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.SOUTH, facing == Direction.NORTH ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.WEST, facing == Direction.EAST ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.NORTH, facing == Direction.SOUTH ? WallSide.LOW : WallSide.NONE)
             );
             mutable.move(Direction.DOWN);
             placeBlock(worldGenRegion, levelReader, mutable, Blocks.NETHER_BRICK_STAIRS.defaultBlockState()
@@ -98,10 +98,10 @@ public class BridgeArchProcessor extends StructureProcessor {
             // Fifth pillar
             mutable.move(facing);
             placeWallBlock(worldGenRegion, levelReader, mutable, Blocks.NETHER_BRICK_WALL.defaultBlockState()
-                    .setValue(WallBlock.EAST_WALL, facing == Direction.WEST || (isJunction && facing == Direction.NORTH) ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.SOUTH_WALL, facing == Direction.NORTH || (isJunction && facing == Direction.EAST) ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.WEST_WALL, facing == Direction.EAST || (isJunction && facing == Direction.SOUTH) ? WallSide.LOW : WallSide.NONE)
-                    .setValue(WallBlock.NORTH_WALL, facing == Direction.SOUTH || (isJunction && facing == Direction.WEST) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.EAST, facing == Direction.WEST || (isJunction && facing == Direction.NORTH) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.SOUTH, facing == Direction.NORTH || (isJunction && facing == Direction.EAST) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.WEST, facing == Direction.EAST || (isJunction && facing == Direction.SOUTH) ? WallSide.LOW : WallSide.NONE)
+                    .setValue(WallBlock.NORTH, facing == Direction.SOUTH || (isJunction && facing == Direction.WEST) ? WallSide.LOW : WallSide.NONE)
             );
             mutable.move(Direction.DOWN);
             placeBlock(worldGenRegion, levelReader, mutable, Blocks.NETHER_BRICKS.defaultBlockState());
@@ -116,13 +116,13 @@ public class BridgeArchProcessor extends StructureProcessor {
     }
 
     private void placeBlock(WorldGenRegion worldGenRegion, LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
-        if (worldGenRegion.getCenter().equals(new ChunkPos(blockPos))) {
-            levelReader.getChunk(blockPos).setBlockState(blockPos, blockState, false);
+        if (worldGenRegion.getCenter().equals(ChunkPos.containing(blockPos))) {
+            levelReader.getChunk(blockPos).setBlockState(blockPos, blockState);
         }
     }
 
     private void placeWallBlock(WorldGenRegion worldGenRegion, LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
-        if (worldGenRegion.getCenter().equals(new ChunkPos(blockPos))) {
+        if (worldGenRegion.getCenter().equals(ChunkPos.containing(blockPos))) {
             BlockPos.MutableBlockPos mutable = blockPos.mutable();
             mutable.move(Direction.NORTH);
             boolean north = levelReader.getChunk(mutable).getBlockState(mutable).isFaceSturdy(levelReader, mutable, Direction.SOUTH);
@@ -133,12 +133,11 @@ public class BridgeArchProcessor extends StructureProcessor {
             mutable.set(blockPos).move(Direction.WEST);
             boolean west = levelReader.getChunk(mutable).getBlockState(mutable).isFaceSturdy(levelReader, mutable, Direction.EAST);
             levelReader.getChunk(blockPos).setBlockState(blockPos, blockState
-                    .setValue(WallBlock.NORTH_WALL, north ? WallSide.LOW : blockState.getValue(WallBlock.NORTH_WALL))
-                    .setValue(WallBlock.EAST_WALL, east ? WallSide.LOW : blockState.getValue(WallBlock.EAST_WALL))
-                    .setValue(WallBlock.SOUTH_WALL, south ? WallSide.LOW : blockState.getValue(WallBlock.SOUTH_WALL))
-                    .setValue(WallBlock.WEST_WALL, west ? WallSide.LOW : blockState.getValue(WallBlock.WEST_WALL))
-                    .setValue(WallBlock.UP, true),
-                    false);
+                    .setValue(WallBlock.NORTH, north ? WallSide.LOW : blockState.getValue(WallBlock.NORTH))
+                    .setValue(WallBlock.EAST, east ? WallSide.LOW : blockState.getValue(WallBlock.EAST))
+                    .setValue(WallBlock.SOUTH, south ? WallSide.LOW : blockState.getValue(WallBlock.SOUTH))
+                    .setValue(WallBlock.WEST, west ? WallSide.LOW : blockState.getValue(WallBlock.WEST))
+                    .setValue(WallBlock.UP, true));
         }
     }
 }

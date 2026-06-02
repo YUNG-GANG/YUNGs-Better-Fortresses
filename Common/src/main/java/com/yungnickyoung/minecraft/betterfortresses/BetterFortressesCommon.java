@@ -3,7 +3,7 @@ package com.yungnickyoung.minecraft.betterfortresses;
 import com.yungnickyoung.minecraft.betterfortresses.module.ConfigModule;
 import com.yungnickyoung.minecraft.betterfortresses.services.Services;
 import com.yungnickyoung.minecraft.yungsapi.api.YungAutoRegister;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,7 +18,7 @@ public class BetterFortressesCommon {
         Services.MODULES.loadModules();
     }
 
-    public static ResourceLocation id(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    public static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 }
