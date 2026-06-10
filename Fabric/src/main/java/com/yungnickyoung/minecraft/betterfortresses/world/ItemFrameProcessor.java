@@ -36,7 +36,7 @@ public class ItemFrameProcessor extends StructureEntityProcessor {
                                                                StructureTemplate.StructureEntityInfo localEntityInfo,
                                                                StructureTemplate.StructureEntityInfo globalEntityInfo,
                                                                StructurePlaceSettings structurePlaceSettings) {
-        if (globalEntityInfo.nbt.getString("id").equals("minecraft:item_frame")) {
+        if (globalEntityInfo.nbt.getStringOr("id", "").equals("minecraft:item_frame")) {
             RandomSource random = structurePlaceSettings.getRandom(globalEntityInfo.blockPos);
 
             // Determine which pool we are grabbing from
