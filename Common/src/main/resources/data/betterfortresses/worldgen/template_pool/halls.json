@@ -238,7 +238,6 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
-    // Small rooms
     {
       "weight": 4,
       "element": {
@@ -353,7 +352,6 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
-    // Medium rooms (left/right)
     {
       "weight": 2,
       "element": {
@@ -582,7 +580,6 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
-    // Medium rooms (side)
     {
       "weight": 1,
       "element": {
@@ -660,7 +657,6 @@
         "element_type": "yungsapi:yung_single_element"
       }
     },
-    // Large rooms
     {
       "weight": 20,
       "element": {
