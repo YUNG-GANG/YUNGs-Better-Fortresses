@@ -8,6 +8,7 @@
         "location": "betterfortresses:keep",
         "processors": "betterfortresses:main",
         "projection": "rigid",
+        "is_priority": true,
         "element_type": "yungsapi:yung_single_element"
       }
     },
@@ -21,7 +22,7 @@
           "type": "yungsapi:mod_loaded",
           "modid": "create"
         },
-        "is_priority": true,
+        "is_priority": false,
         "element_type": "yungsapi:yung_single_element"
       }
     }
