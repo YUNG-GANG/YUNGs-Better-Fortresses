@@ -1,7 +1,6 @@
 package com.yungnickyoung.minecraft.betterfortresses.world.processor;
 
 import com.mojang.serialization.MapCodec;
-import com.yungnickyoung.minecraft.betterfortresses.module.StructureProcessorTypeModule;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -16,14 +15,13 @@ import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
 
 
 
 
-public class BridgeArchProcessor extends StructureProcessor {
+public class BridgeArchProcessor implements StructureProcessor {
     public static final BridgeArchProcessor INSTANCE = new BridgeArchProcessor();
     public static final MapCodec<BridgeArchProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
 
@@ -31,7 +29,7 @@ public class BridgeArchProcessor extends StructureProcessor {
     public StructureTemplate.StructureBlockInfo processBlock(LevelReader levelReader,
                                                              BlockPos jigsawPiecePos,
                                                              BlockPos jigsawPieceBottomCenterPos,
-                                                             StructureTemplate.StructureBlockInfo blockInfoLocal,
+                                                             BlockPos blockPos,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
         if (blockInfoGlobal.state().is(Blocks.PRISMARINE_STAIRS) || blockInfoGlobal.state().is(Blocks.PRISMARINE_BRICK_STAIRS)) {
@@ -111,8 +109,9 @@ public class BridgeArchProcessor extends StructureProcessor {
         return blockInfoGlobal;
     }
 
-    protected StructureProcessorType<?> getType() {
-        return StructureProcessorTypeModule.BRIDGE_ARCH_PROCESSOR;
+    @Override
+    public MapCodec<? extends StructureProcessor> codec() {
+        return CODEC;
     }
 
     private void placeBlock(WorldGenRegion worldGenRegion, LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
