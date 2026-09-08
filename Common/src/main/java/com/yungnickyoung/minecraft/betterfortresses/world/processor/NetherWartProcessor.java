@@ -9,14 +9,13 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
 
 
 
 
-public class NetherWartProcessor extends StructureProcessor {
+public class NetherWartProcessor implements StructureProcessor {
     public static final NetherWartProcessor INSTANCE = new NetherWartProcessor();
     public static final MapCodec<NetherWartProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
 
@@ -24,7 +23,7 @@ public class NetherWartProcessor extends StructureProcessor {
     public StructureTemplate.StructureBlockInfo processBlock(LevelReader levelReader,
                                                              BlockPos jigsawPiecePos,
                                                              BlockPos jigsawPieceBottomCenterPos,
-                                                             StructureTemplate.StructureBlockInfo blockInfoLocal,
+                                                             BlockPos templateRelativePos,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
         if (blockInfoGlobal.state().is(Blocks.NETHER_WART)) {
@@ -36,7 +35,7 @@ public class NetherWartProcessor extends StructureProcessor {
         return blockInfoGlobal;
     }
 
-    protected StructureProcessorType<?> getType() {
+    public MapCodec<? extends StructureProcessor> codec() {
         return StructureProcessorTypeModule.NETHER_WART_PROCESSOR;
     }
 }

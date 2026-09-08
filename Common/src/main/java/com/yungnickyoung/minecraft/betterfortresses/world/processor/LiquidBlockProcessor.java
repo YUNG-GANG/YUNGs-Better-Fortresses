@@ -11,7 +11,6 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.material.Fluids;
 
@@ -19,7 +18,7 @@ import net.minecraft.world.level.material.Fluids;
 
 
 
-public class LiquidBlockProcessor extends StructureProcessor {
+public class LiquidBlockProcessor implements StructureProcessor {
     public static final MapCodec<LiquidBlockProcessor> CODEC = RecordCodecBuilder.mapCodec(instance -> instance
             .group(
                     BlockState.CODEC.fieldOf("target_block").forGetter(config -> config.targetBlock),
@@ -38,7 +37,7 @@ public class LiquidBlockProcessor extends StructureProcessor {
     public StructureTemplate.StructureBlockInfo processBlock(LevelReader levelReader,
                                                              BlockPos jigsawPiecePos,
                                                              BlockPos jigsawPieceBottomCenterPos,
-                                                             StructureTemplate.StructureBlockInfo blockInfoLocal,
+                                                             BlockPos templateRelativePos,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
         if (blockInfoGlobal.state().is(this.targetBlock.getBlock())) {
@@ -53,7 +52,7 @@ public class LiquidBlockProcessor extends StructureProcessor {
         return blockInfoGlobal;
     }
 
-    protected StructureProcessorType<?> getType() {
+    public MapCodec<? extends StructureProcessor> codec() {
         return StructureProcessorTypeModule.LIQUID_BLOCK_PROCESSOR;
     }
 }

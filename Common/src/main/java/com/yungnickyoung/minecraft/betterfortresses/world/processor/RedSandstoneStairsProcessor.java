@@ -15,14 +15,13 @@ import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
 
 
 
 
-public class RedSandstoneStairsProcessor extends StructureProcessor {
+public class RedSandstoneStairsProcessor implements StructureProcessor {
     public static final RedSandstoneStairsProcessor INSTANCE = new RedSandstoneStairsProcessor();
     public static final MapCodec<RedSandstoneStairsProcessor> CODEC = MapCodec.unit(() -> INSTANCE);
 
@@ -30,7 +29,7 @@ public class RedSandstoneStairsProcessor extends StructureProcessor {
     public StructureTemplate.StructureBlockInfo processBlock(LevelReader levelReader,
                                                              BlockPos jigsawPiecePos,
                                                              BlockPos jigsawPieceBottomCenterPos,
-                                                             StructureTemplate.StructureBlockInfo blockInfoLocal,
+                                                             BlockPos templateRelativePos,
                                                              StructureTemplate.StructureBlockInfo blockInfoGlobal,
                                                              StructurePlaceSettings structurePlacementData) {
         if (blockInfoGlobal.state().is(Blocks.RED_SANDSTONE_STAIRS)) {
@@ -68,7 +67,7 @@ public class RedSandstoneStairsProcessor extends StructureProcessor {
         return blockInfoGlobal;
     }
 
-    protected StructureProcessorType<?> getType() {
+    public MapCodec<? extends StructureProcessor> codec() {
         return StructureProcessorTypeModule.RED_SANDSTONE_STAIRS_PROCESSOR;
     }
 }
