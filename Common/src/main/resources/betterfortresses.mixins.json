@@ -5,7 +5,7 @@
   "mixins": [
     "DisableVanillaFortressesMixin",
     "FixMobSpawningMixin",
-    "LocateVanillaFortressCommandMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1

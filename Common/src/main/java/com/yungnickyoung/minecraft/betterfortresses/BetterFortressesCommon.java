@@ -3,7 +3,11 @@ package com.yungnickyoung.minecraft.betterfortresses;
 import com.yungnickyoung.minecraft.betterfortresses.module.ConfigModule;
 import com.yungnickyoung.minecraft.betterfortresses.services.Services;
 import com.yungnickyoung.minecraft.yungsapi.api.YungAutoRegister;
+import com.yungnickyoung.minecraft.yungsapi.api.world.structure.locate.LocateReplacer;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.levelgen.structure.BuiltinStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,6 +20,10 @@ public class BetterFortressesCommon {
     public static void init() {
         YungAutoRegister.scanPackageForAnnotations("com.yungnickyoung.minecraft.betterfortresses.module");
         Services.MODULES.loadModules();
+
+        LocateReplacer.register(BuiltinStructures.FORTRESS,
+                ResourceKey.create(Registries.STRUCTURE, Identifier.fromNamespaceAndPath(MOD_ID, "fortress")),
+                () -> CONFIG.general.disableVanillaFortresses);
     }
 
     public static Identifier id(String path) {
