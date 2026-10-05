@@ -2,7 +2,6 @@
   "parent": "minecraft:nether/root",
   "display": {
     "icon": {
-      "count": 1,
       "id": "minecraft:nether_bricks"
     },
     "title": {
@@ -17,20 +16,18 @@
     "in_fortress": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "structures": [
-                  "minecraft:fortress",
-                  "betterfortresses:fortress"
-                ]
-              }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": [
+                "minecraft:fortress",
+                "betterfortresses:fortress"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },
