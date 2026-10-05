@@ -18,23 +18,22 @@
     {
       "processor_type": "betterfortresses:pillar_processor",
       "target_block": {
-        "Name": "minecraft:orange_terracotta"
+        "id": "minecraft:orange_terracotta"
       },
       "target_block_output": {
         "defaultBlockState": {
-          "Name": "minecraft:red_nether_bricks"
+          "id": "minecraft:red_nether_bricks"
         },
-        "entries": [
-        ]
+        "entries": []
       },
       "pillar_states": {
         "defaultBlockState": {
-          "Name": "minecraft:nether_bricks"
+          "id": "minecraft:nether_bricks"
         },
         "entries": [
           {
             "blockState": {
-              "Name": "minecraft:magma_block"
+              "id": "minecraft:magma_block"
             },
             "probability": 0.5,
             "condition": {
@@ -44,7 +43,7 @@
           },
           {
             "blockState": {
-              "Name": "minecraft:cracked_nether_bricks"
+              "id": "minecraft:cracked_nether_bricks"
             },
             "probability": 0.4,
             "condition": {
@@ -58,23 +57,22 @@
     {
       "processor_type": "betterfortresses:pillar_processor",
       "target_block": {
-        "Name": "minecraft:yellow_terracotta"
+        "id": "minecraft:yellow_terracotta"
       },
       "target_block_output": {
         "defaultBlockState": {
-          "Name": "minecraft:nether_bricks"
+          "id": "minecraft:nether_bricks"
         },
-        "entries": [
-        ]
+        "entries": []
       },
       "pillar_states": {
         "defaultBlockState": {
-          "Name": "minecraft:nether_bricks"
+          "id": "minecraft:nether_bricks"
         },
         "entries": [
           {
             "blockState": {
-              "Name": "minecraft:magma_block"
+              "id": "minecraft:magma_block"
             },
             "probability": 0.5,
             "condition": {
@@ -84,7 +82,7 @@
           },
           {
             "blockState": {
-              "Name": "minecraft:cracked_nether_bricks"
+              "id": "minecraft:cracked_nether_bricks"
             },
             "probability": 0.4,
             "condition": {
@@ -98,16 +96,16 @@
     {
       "processor_type": "betterfortresses:pillar_processor",
       "target_block": {
-        "Name": "minecraft:orange_wool"
+        "id": "minecraft:orange_wool"
       },
       "target_block_output": {
         "defaultBlockState": {
-          "Name": "minecraft:nether_bricks"
+          "id": "minecraft:nether_bricks"
         },
         "entries": [
           {
             "blockState": {
-              "Name": "minecraft:magma_block"
+              "id": "minecraft:magma_block"
             },
             "probability": 0.75
           }
@@ -115,12 +113,12 @@
       },
       "pillar_states": {
         "defaultBlockState": {
-          "Name": "minecraft:nether_bricks"
+          "id": "minecraft:nether_bricks"
         },
         "entries": [
           {
             "blockState": {
-              "Name": "minecraft:cracked_nether_bricks"
+              "id": "minecraft:cracked_nether_bricks"
             },
             "probability": 0.4
           }
@@ -130,16 +128,16 @@
     {
       "processor_type": "betterfortresses:pillar_processor",
       "target_block": {
-        "Name": "minecraft:orange_concrete"
+        "id": "minecraft:orange_concrete"
       },
       "target_block_output": {
         "defaultBlockState": {
-          "Name": "minecraft:nether_bricks"
+          "id": "minecraft:nether_bricks"
         },
         "entries": [
           {
             "blockState": {
-              "Name": "minecraft:magma_block"
+              "id": "minecraft:magma_block"
             },
             "probability": 0.75
           }
@@ -147,12 +145,12 @@
       },
       "pillar_states": {
         "defaultBlockState": {
-          "Name": "minecraft:nether_bricks"
+          "id": "minecraft:nether_bricks"
         },
         "entries": [
           {
             "blockState": {
-              "Name": "minecraft:cracked_nether_bricks"
+              "id": "minecraft:cracked_nether_bricks"
             },
             "probability": 0.4
           }
@@ -162,10 +160,10 @@
     {
       "processor_type": "betterfortresses:liquid_block_processor",
       "target_block": {
-        "Name": "minecraft:diorite"
+        "id": "minecraft:diorite"
       },
       "target_block_output": {
-        "Name": "minecraft:lava"
+        "id": "minecraft:lava"
       }
     },
     {
@@ -181,7 +179,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:obsidian"
+            "id": "minecraft:obsidian"
           }
         },
         {
@@ -193,7 +191,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:crying_obsidian"
+            "id": "minecraft:crying_obsidian"
           }
         },
         {
@@ -205,7 +203,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:tnt"
+            "id": "minecraft:tnt"
           }
         },
         {
@@ -218,7 +216,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:cracked_nether_bricks"
+            "id": "minecraft:cracked_nether_bricks"
           }
         }
       ]

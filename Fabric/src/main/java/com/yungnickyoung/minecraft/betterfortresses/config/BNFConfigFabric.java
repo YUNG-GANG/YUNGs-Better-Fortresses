@@ -4,7 +4,7 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@Config(name="betterfortresses-fabric-26_1")
+@Config(name="betterfortresses-fabric-26_3")
 public class BNFConfigFabric implements ConfigData {
     @ConfigEntry.Category("Better Nether Fortresses")
     @ConfigEntry.Gui.TransitiveObject
